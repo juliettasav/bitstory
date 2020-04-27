@@ -50,18 +50,19 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .intro__animation {
-  height: 50vh;
+  height: 40vh;
 }
 
 .intro__footer__title p {
-  font-size: 21px;
+  font-size: 37px;
   color: #efefef;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   padding: 10px 0;
+  letter-spacing: 2.8px;
 }
 
 .intro__footer__title p:last-child {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 /*# sourceMappingURL=main.css.map */
