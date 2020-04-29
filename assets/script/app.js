@@ -27,12 +27,12 @@ window.onload = (e) => {
         leftTopCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         rightTopHalfCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         
-    }, 1000);
+    }, 1100);
 
     setTimeout(() => {
         
         leftBottomStroke.style.stroke = "none";
-    }, 1600)
+    }, 1700)
     
     setTimeout(() => {
         rightTopStroke.style.stroke = "none";
@@ -41,14 +41,14 @@ window.onload = (e) => {
         rightBottomCircle.style.fill = "#efefef";
         leftBottomHalfCircle.style.fill = "#efefef";
 
-    }, 2000)
+    }, 2100)
 
     setTimeout(() => {
         leftTopCircleMove.style.left = "calc(100% - 155px)";
         rigthTopCircleMove.style.right = "calc(75% - 155px)";
         leftTopCircle.style.fill = "#efefef";
         rightTopHalfCircle.style.fill = "#efefef";
-    }, 2100)
+    }, 2200)
 
     // setTimeout(() => {
   
