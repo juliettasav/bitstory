@@ -70,6 +70,34 @@ nav.nav-top
                 opacity: 1
         li:nth-child(2)
             margin: 32px 0
+.title
+    position: fixed
+    width: 100%
+    bottom: 10%
+    &__footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media screen and (max-width: 425px)
+            padding-top: 40px
+        &__title
+            p
+                font-size: 37px
+                color: #efefef
+                font-family: 'Lato', sans-serif
+                font-weight: 600
+                padding: 10px 0
+                letter-spacing: 6px
+            p:last-child
+                padding-bottom: 43px 
+        &__arrow
+            img
+                width: 32px
+                opacity: .5
+                transition: all ease-in-out .2s
+            img:hover
+                opacity: 1s
+
 // INTRO SECTION
 .intro
     height: 100vh
@@ -133,29 +161,7 @@ nav.nav-top
         .circle-plain-right-bottom
             right: 0
             bottom: 0
-    &__footer
-        display: flex
-        align-items: center
-        justify-content: space-between
-        @media screen and (max-width: 425px)
-            padding-top: 40px
-        &__title
-            p
-                font-size: 37px
-                color: #efefef
-                font-family: 'Lato', sans-serif
-                font-weight: 600
-                padding: 10px 0
-                letter-spacing: 6px
-            p:last-child
-                padding-bottom: 43px 
-        &__arrow
-            img
-                width: 32px
-                opacity: .5
-                transition: all ease-in-out .2s
-            img:hover
-                opacity: 1
+
 
 
 // SECOND SEСTION
