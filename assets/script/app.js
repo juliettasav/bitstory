@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => {
     const thirdSection =  document.querySelector("section.we-create");
     const size = document.documentElement.clientHeight;
     const secondSectionValue = size * 2;
-    const thirdSectionValue = size * 3;
+    // const thirdSectionValue = size * 3;
     let scrollValue = window.pageYOffset;
     if(scrollValue >= 0 && scrollValue <= size)
     {
@@ -82,8 +82,33 @@ window.onload = (e) => {
         leftTopCircle.style.fill = "#efefef";
         rightTopHalfCircle.style.fill = "#efefef";
     }, 2200)
+
     
 }
+
+window.addEventListener('scroll', () => {
+    const leftTopCircleMove = document.querySelector(".circle-plain-left");
+    const rigthTopCircleMove = document.querySelector(".circle-plain-right");
+    const leftBottomCircleMove = document.querySelector(".circle-plain-left-bottom");
+    const rigthBottomCircleMove = document.querySelector(".circle-plain-right-bottom");
+    
+    let scrollValue = window.pageYOffset;
+    console.log(scrollValue);
+    console.log(leftTopCircleMove);
+
+    if(scrollValue > 0) {
+        leftTopCircleMove.style.left = `calc(100% - 155px + ${scrollValue / 2}px)`;
+        rigthTopCircleMove.style.top = `-${scrollValue / 2}px`;
+        leftBottomCircleMove.style.bottom = `-${scrollValue / 2}px`
+        rigthBottomCircleMove.style.right = `calc(100% - 155px + ${scrollValue / 2}px)`
+    }
+    // else
+    // {
+    //     leftTopCircleMove.style.left = "calc(100% - 155px)";
+    // }
+    
+})
+
 // SECOND ANIMATION
 window.addEventListener('scroll', () => {
     
