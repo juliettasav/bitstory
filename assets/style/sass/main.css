@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 .wrapper {
   background-color: #000;
+  height: 400vh;
 }
 
 .container {
@@ -93,6 +94,11 @@ nav.nav-top ul li:nth-child(2) {
 
 .intro {
   height: 100vh;
+  width: 100%;
+  position: fixed;
+  opacity: 1;
+  -webkit-transition: all ease-in-out .4s;
+  transition: all ease-in-out .4s;
 }
 
 .intro .container {
@@ -228,6 +234,11 @@ nav.nav-top ul li:nth-child(2) {
 .about {
   height: 100vh;
   padding: 100px 0;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
 }
 
 .about__animation {
@@ -238,6 +249,11 @@ nav.nav-top ul li:nth-child(2) {
 .we-create {
   height: 100vh;
   padding: 100px 0;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
 }
 
 .we-create__animation {

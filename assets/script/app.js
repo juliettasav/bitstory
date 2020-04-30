@@ -1,4 +1,34 @@
+window.addEventListener('scroll', () => {
+    const firstSection =  document.querySelector("section.intro");
+    const secondSection =  document.querySelector("section.about");
+    const thirdSection =  document.querySelector("section.we-create");
+    const size = document.documentElement.clientHeight;
+    const secondSectionValue = size * 2;
+    const thirdSectionValue = size * 3;
+    let scrollValue = window.pageYOffset;
+    if(scrollValue >= 0 && scrollValue <= size)
+    {
+        firstSection.style.opacity = "1";
+        secondSection.style.opacity = "0";
+        thirdSection.style.opacity = "0";
+    }
+    if(scrollValue >= size && scrollValue <= secondSectionValue)
+    {
+        firstSection.style.opacity = "0";
+        secondSection.style.opacity = "1";
+        thirdSection.style.opacity = "0";
+    }
+    if (scrollValue > secondSectionValue)
+    {
+        firstSection.style.opacity = "0";
+        secondSection.style.opacity = "0";
+        thirdSection.style.opacity = "1";
+    }
+    
 
+
+
+})
 
 
 
@@ -57,7 +87,10 @@ window.onload = (e) => {
     
 }
 // SECOND ANIMATION
+window.addEventListener('scroll', () => {
+    
 
+})
 
 
 // THIRD ANIMATION 
