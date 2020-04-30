@@ -1,12 +1,14 @@
-// 263px - havigation
+// Import font family
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
+// General Option
 .wrapper
     background-color: #000
-
 .container 
     max-width: 1152px
     margin: 0 auto
+
+// Header style
 header
     padding-top: 103px
     .container
@@ -34,7 +36,7 @@ nav.nav-top
                 opacity: 1
         li:nth-child(2)
             margin: 32px 0
-
+// INTRO SECTION
 .intro
     &__animation
         width: 310px
@@ -53,7 +55,6 @@ nav.nav-top
                 stroke-dasharray: 3000
                 stroke-dashoffset: 3000
                 animation: lineSquare 4.2s .8s cubic-bezier(0.12, 0, 0.39, 0)
-            
             #Vertical-Left, #Vertical-Right
                 line
                     stroke-dasharray: 3000
@@ -62,8 +63,6 @@ nav.nav-top
                     // transform-origin: center
                     // transform: rotate(180deg)
                     // transform-box: fill-box
-        .grid
-            
         .circle-plain
             width: 155px
             position: absolute
@@ -116,6 +115,22 @@ nav.nav-top
                 opacity: 1
 
 
+// SECOND SEСTION
+.about
+    // height: 100vh
+    padding: 100px 0
+    &__animation
+        margin: 0 auto
+        width: 310px
+
+// THIRD SECTION
+.we-create
+    padding: 100px 0
+    &__animation
+        margin: 0 auto
+        width: 310px
+        
+// Animation CSS
 
 @keyframes left-right-top
     0%

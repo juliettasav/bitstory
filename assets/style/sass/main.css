@@ -173,6 +173,24 @@ nav.nav-top ul li:nth-child(2) {
   opacity: 1;
 }
 
+.about {
+  padding: 100px 0;
+}
+
+.about__animation {
+  margin: 0 auto;
+  width: 310px;
+}
+
+.we-create {
+  padding: 100px 0;
+}
+
+.we-create__animation {
+  margin: 0 auto;
+  width: 310px;
+}
+
 @-webkit-keyframes left-right-top {
   0% {
     left: 0;
