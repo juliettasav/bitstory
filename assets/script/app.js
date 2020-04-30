@@ -26,8 +26,6 @@ window.addEventListener('scroll', () => {
     }
     
 
-
-
 })
 
 
@@ -89,7 +87,6 @@ window.onload = (e) => {
 // SECOND ANIMATION
 window.addEventListener('scroll', () => {
     
-
 })
 
 
@@ -106,7 +103,8 @@ window.addEventListener('scroll', () => {
     const blackBlocks = document.querySelectorAll(".black");
     const rigthBlock = document.querySelector("#Rigth-Block");
     const allLines = document.querySelectorAll(".st0");
-    const thirdAnimationSrart = (secondSection / 8) + secondSection;
+    const size = document.documentElement.clientHeight;
+    const thirdAnimationSrart = size * 2;
     
     
     if(scrollValue >= thirdAnimationSrart)

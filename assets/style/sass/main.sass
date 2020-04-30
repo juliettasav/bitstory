@@ -2,9 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 // General Option
+::-webkit-scrollbar 
+    width: 8px
+
+ 
+::-webkit-scrollbar-track 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+    background-color: black
+
+
+
+::-webkit-scrollbar-thumb 
+    border-radius: 10px
+    background-color: white
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+
 .wrapper
     background-color: #000
     height: 400vh
+    overflow: scroll
+    &::-webkit-scrollbar-thumb
+        background-color: #F5F5F5
 .container 
     max-width: 1152px
     margin: 0 auto
@@ -148,6 +166,8 @@ nav.nav-top
     position: fixed
     opacity: 0
     transition: all ease-in-out .2s
+    .container
+        padding-top: 100px
     &__animation
         margin: 0 auto
         width: 310px
