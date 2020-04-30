@@ -56,6 +56,9 @@ window.onload = (e) => {
     }, 2200)
     
 }
+// SECOND ANIMATION
+
+
 
 // THIRD ANIMATION 
 window.addEventListener('scroll', () => {
