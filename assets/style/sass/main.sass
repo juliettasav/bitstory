@@ -7,10 +7,21 @@
 .container 
     max-width: 1152px
     margin: 0 auto
+    @media screen and (max-width: 1024px)
+        max-width: 950px
+    @media screen and (max-width: 768px)
+        max-width: 700px
+    @media screen and (max-width: 425px)
+        max-width: 300px
+
 
 // Header style
 header
-    padding-top: 103px
+    padding-top: 100px
+    @media screen and (max-width: 1024px)
+        padding-top: 40px
+    @media screen and (max-width: 425px)
+        padding: 20px 0 40px
     .container
         display: flex
         align-items: flex-start
@@ -21,6 +32,8 @@ header
 nav.nav-top
     ul
         text-align: right
+        @media screen and (max-width: 425px)
+            display: none
         li
             a
                 font-size: 21px
@@ -96,6 +109,8 @@ nav.nav-top
         display: flex
         align-items: center
         justify-content: space-between
+        @media screen and (max-width: 425px)
+            padding-top: 40px
         &__title
             p
                 font-size: 37px
