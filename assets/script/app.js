@@ -11,7 +11,6 @@ window.onload = (e) => {
     const leftBottomHalfCircle = leftBottomCircleMove.childNodes[4].childNodes[0];
     const leftBottomStroke = leftBottomCircleMove.childNodes[2].childNodes[0];
 
-    console.log(rightTopStroke);
     
     setTimeout(() => {
         leftBottomHalfCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
@@ -50,8 +49,5 @@ window.onload = (e) => {
         rightTopHalfCircle.style.fill = "#efefef";
     }, 2200)
 
-    // setTimeout(() => {
-  
-    // }, 500)
     
 }
