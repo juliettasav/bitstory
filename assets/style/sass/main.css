@@ -27,6 +27,8 @@
 }
 
 header {
+  position: fixed;
+  width: 100%;
   padding-top: 80px;
 }
 
@@ -87,6 +89,14 @@ nav.nav-top ul li a:hover {
 
 nav.nav-top ul li:nth-child(2) {
   margin: 32px 0;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro .container {
+  padding-top: 200px;
 }
 
 .intro__animation {
@@ -216,6 +226,7 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .about {
+  height: 100vh;
   padding: 100px 0;
 }
 
@@ -225,12 +236,86 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .we-create {
+  height: 100vh;
   padding: 100px 0;
 }
 
 .we-create__animation {
   margin: 0 auto;
   width: 310px;
+}
+
+.we-create__animation .ubi-svg #Rigth-Block {
+  -webkit-transform: translateY(1400px);
+          transform: translateY(1400px);
+}
+
+.we-create__animation .ubi-svg #Square-CENTER rect {
+  -webkit-transform: translateY(790px);
+          transform: translateY(790px);
+  z-index: 1;
+}
+
+.we-create__animation .ubi-svg #Block-Center-Right-L-Black rect {
+  fill: black;
+  z-index: 0;
+}
+
+.we-create__animation .ubi-svg #Block-Center-Top-Left-L rect {
+  -webkit-transform: translateY(1400px);
+          transform: translateY(1400px);
+}
+
+.we-create__animation .ubi-svg #Block-Center-Top-Left-L-Black rect {
+  fill: black;
+  stroke: #efefef;
+}
+
+.we-create__animation .ubi-svg #Block-Left-Top-Black rect {
+  fill: black;
+  stroke: #efefef;
+}
+
+.we-create__animation .ubi-svg g#Block-Left-Top rect {
+  -webkit-transform: translateY(1400px);
+          transform: translateY(1400px);
+}
+
+.we-create__animation .ubi-svg #Block-Left-Bottom rect {
+  fill: #efefef;
+}
+
+.we-create__animation .ubi-svg #Block-Utekai rect {
+  -webkit-transform: translateY(1400px);
+          transform: translateY(1400px);
+}
+
+@-webkit-keyframes goGo {
+  to {
+    -webkit-transform: translateY(-1400px);
+            transform: translateY(-1400px);
+  }
+}
+
+@keyframes goGo {
+  to {
+    -webkit-transform: translateY(-1400px);
+            transform: translateY(-1400px);
+  }
+}
+
+@-webkit-keyframes bottomGo {
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bottomGo {
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @-webkit-keyframes left-right-top {

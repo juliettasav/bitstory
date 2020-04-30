@@ -17,6 +17,8 @@
 
 // Header style
 header
+    position: fixed
+    width: 100%
     padding-top: 80px
     @media screen and (max-width: 1024px)
         padding-top: 40px
@@ -51,6 +53,9 @@ nav.nav-top
             margin: 32px 0
 // INTRO SECTION
 .intro
+    height: 100vh
+    .container
+        padding-top: 200px
     &__animation
         width: 310px
         height: 310px
@@ -132,7 +137,7 @@ nav.nav-top
 
 // SECOND SEСTION
 .about
-    // height: 100vh
+    height: 100vh
     padding: 100px 0
     &__animation
         margin: 0 auto
@@ -140,12 +145,53 @@ nav.nav-top
 
 // THIRD SECTION
 .we-create
+    height: 100vh
     padding: 100px 0
     &__animation
         margin: 0 auto
         width: 310px
+        .ubi-svg
+            #Rigth-Block
+                transform: translateY(1400px)
+            #Square-CENTER
+                rect
+                    transform: translateY(790px)
+                    z-index: 1
+            #Block-Center-Right-L-Black
+                rect 
+                    fill: black
+                    z-index: 0
+            #Block-Center-Top-Left-L
+                rect 
+                    transform: translateY(1400px)
+            #Block-Center-Top-Left-L-Black
+                rect
+                    fill: black
+                    stroke: #efefef
+            #Block-Left-Top-Black
+                rect
+                    fill: black
+                    stroke: #efefef
+            g#Block-Left-Top
+                rect
+                    transform: translateY(1400px)
+            #Block-Left-Bottom
+                rect 
+                    // animation: goGo 2s cubic-bezier(0.33, 1, 0.68, 1)
+                    fill: #efefef
+            #Block-Utekai
+                rect 
+                    transform: translateY(1400px)
+                    // animation: bottomGo 2s cubic-bezier(0.33, 1, 0.68, 1)
         
 // Animation CSS
+
+@keyframes goGo
+    to
+        transform: translateY(-1400px)
+@keyframes bottomGo
+    to
+        transform: translateY(0px)
 
 @keyframes left-right-top
     0%
