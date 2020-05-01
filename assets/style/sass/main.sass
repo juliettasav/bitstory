@@ -39,6 +39,7 @@ header
     position: fixed
     width: 100%
     padding-top: 80px
+    z-index: 3
     @media screen and (max-width: 1024px)
         padding-top: 40px
     @media screen and (max-width: 425px)
@@ -74,6 +75,7 @@ nav.nav-top
     position: fixed
     width: 100%
     bottom: 10%
+    z-index: 3
     &__footer
         display: flex
         align-items: center
@@ -105,11 +107,11 @@ nav.nav-top
     position: fixed
     opacity: 1
     transition: all ease-in-out .4s
+    z-index: 1
     .container
         padding-top: 200px
     &__animation
         width: 310px
-        height: 310px
         position: relative
         margin: 0 auto
         .grid-square
@@ -167,7 +169,7 @@ nav.nav-top
 // SECOND SEСTION
 .about
     height: 100vh
-    padding: 100px 0
+    // padding: 100px 0
     width: 100%
     position: fixed
     opacity: 0
@@ -176,7 +178,7 @@ nav.nav-top
         padding-top: 100px
     &__animation
         margin: 0 auto
-        width: 310px
+        width: 510px
 
 // THIRD SECTION
 .we-create
