@@ -93,8 +93,6 @@ window.addEventListener('scroll', () => {
     const rigthBottomCircleMove = document.querySelector(".circle-plain-right-bottom");
     
     let scrollValue = window.pageYOffset;
-    console.log(scrollValue);
-    console.log(leftTopCircleMove);
 
     if(scrollValue > 0) {
         leftTopCircleMove.style.left = `calc(100% - 155px + ${scrollValue / 2}px)`;
@@ -102,15 +100,174 @@ window.addEventListener('scroll', () => {
         leftBottomCircleMove.style.bottom = `-${scrollValue / 2}px`
         rigthBottomCircleMove.style.right = `calc(100% - 155px + ${scrollValue / 2}px)`
     }
-    // else
-    // {
-    //     leftTopCircleMove.style.left = "calc(100% - 155px)";
-    // }
+
+
+
     
 })
 
 // SECOND ANIMATION
 window.addEventListener('scroll', () => {
+    let scrollValue = window.pageYOffset;
+    const size = document.documentElement.clientHeight;
+    const firstTriangle  = document.querySelector("g#_x31_ > polygon");
+    const secondTriangle  = document.querySelector("g#_x32_ > polygon");
+    const thirdTriangle  = document.querySelector("g#_x33_ > polygon");
+    const fourthTriangle  = document.querySelector("g#_x34_ > polygon");
+    const fifthTriangle  = document.querySelector("g#_x35_ > polygon");
+    const sixthTriangle  = document.querySelector("g#_x36_ > polygon");
+    const sevenTriangle  = document.querySelector("g#_x37_ > polygon");
+    const eightTriangle  = document.querySelector("g#_x38_ > polygon");
+    const ninthTriangle  = document.querySelector("g#_x39_ > polygon");
+    const tenTriangle  = document.querySelector("g#_x31_0 > polygon");
+    const elvnTriangle  = document.querySelector("g#_x31_1 > polygon");
+    const twlvriangle  = document.querySelector("g#_x31_2 > polygon");
+    const thrteenTriangle  = document.querySelector("g#_x31_3 > polygon");
+    const fourteenTriangle  = document.querySelector("g#_x31_4 > polygon");
+
+
+    // console.log(firstTriangle.hasAttribute("points"));
+    let value = scrollValue - size;
+    if(scrollValue >= size)
+    {
+        if(value < 117) {
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 ${351.1 + (value * 3)},${697.7 + (value * 3)}`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 ${1048.9 - (value * 3)},${697.7 - (value * 3)}`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,697.7`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,697.7`);
+            fifthTriangle.setAttribute("points", `700,348.9 872.45,521.3 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 525.45,872.1 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `1048.9,697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,348.9`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1046.6`);
+            tenTriangle.setAttribute("points", `351.1,697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
+            elvnTriangle.style.opacity = '0';
+            twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
+        }
+        else if (value > 117 && value < 234)
+        {
+            let secondValue = value - 118;
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,${697.7 + (secondValue * 3) }`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,${697.7 - (secondValue * 3)}`);
+            fifthTriangle.setAttribute("points", `700,348.9 872.45,521.3 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 525.45,872.1 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `1048.9,697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,348.9`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1046.6`);
+            tenTriangle.setAttribute("points", `351.1,697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.style.opacity = '0';
+            elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
+            twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
+
+            
+        }
+        else if (value > 234 && value < 292)
+        {
+            let secondValue = value - 233;
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,1046.6`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,348.9`);
+            fifthTriangle.setAttribute("points", `700,348.9 ${872.45 + (secondValue * 3)},${521.3 - (secondValue * 3)} 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 ${525.45 - (secondValue * 3)},${872.1 + (secondValue * 3)} 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `1048.9,697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,348.9`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1046.6`);
+            tenTriangle.setAttribute("points", `351.1,697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
+            elvnTriangle.style.opacity = '0';
+            twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
+        }
+
+        else if (value > 292 && value < 408)
+        {
+            let secondValue = value - 291;
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,1046.6`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,348.9`);
+            fifthTriangle.setAttribute("points", `700,348.9 1048.9,348.9 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 351.1,1046.6 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `${1048.9 + (secondValue * 3)},697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,${348.9 - (secondValue * 3)}`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,${1046.6 + (secondValue * 3)}`);
+            tenTriangle.setAttribute("points", `${351.1 - (secondValue * 3)},697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
+            elvnTriangle.style.opacity = '0';
+            twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
+            
+
+        }
+
+        else if (value > 408 && value < 466)
+        {
+            let secondValue = value - 408;
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,1046.6`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,348.9`);
+            fifthTriangle.setAttribute("points", `700,348.9 1048.9,348.9 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 351.1,1046.6 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `1397.7,697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,0`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1395.4`);
+            tenTriangle.setAttribute("points", `2.3,697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.style.opacity = '1';
+            elvnTriangle.setAttribute("points", `1048.9,348.9 ${1223.3 + (secondValue * 3)},${523.2 - (secondValue * 3)} 1397.7,697.7`);
+            twlvriangle.setAttribute("points", `351.1,1046.6 ${174 - (secondValue * 3)},${869.5 + (secondValue * 3)} 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
+        }
+        else if (value > 466 && value < 525)
+        {
+            let secondValue = value - 408;
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,1046.6`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,348.9`);
+            fifthTriangle.setAttribute("points", `700,348.9 1048.9,348.9 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 351.1,1046.6 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `1397.7,697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,0`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1395.4`);
+            tenTriangle.setAttribute("points", `2.3,697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.setAttribute("points", `1048.9,348.9 1397.7,348.9 1397.7,697.7`);
+            twlvriangle.setAttribute("points", `351.1,1046.6 2.3,1046.6 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,${1046.6 + (secondValue * 3)}`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,${348.9 - (secondValue * 3)}`);
+        }
+        else if (value >= 525)
+        {
+            firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
+            secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
+            thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,1046.6`);
+            fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,348.9`);
+            fifthTriangle.setAttribute("points", `700,348.9 1048.9,348.9 1048.9,697.7`);
+            sixthTriangle.setAttribute("points", `700,1046.6 351.1,1046.6 351.1,697.7`);
+            sevenTriangle.setAttribute("points", `1397.7,697.7 1048.9,697.7 1048.9,348.9`);
+            eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,0`);
+            ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1395.4`);
+            tenTriangle.setAttribute("points", `2.3,697.7 351.1,697.7 351.1,1046.6`);
+            elvnTriangle.setAttribute("points", `1048.9,348.9 1397.7,348.9 1397.7,697.7`);
+            twlvriangle.setAttribute("points", `351.1,1046.6 2.3,1046.6 2.3,697.7`);
+            thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1395.4`);
+            fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,0`);
+        }
+         
+        
+    }
+    
     
 })
 
