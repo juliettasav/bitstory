@@ -40,8 +40,8 @@ window.addEventListener('scroll', () => {
 
 window.onload = (e) => {
     e.preventDefault();
-    // let scrollValue = window.pageYOffset;
-    // scrollValue = 0;
+
+
     //FIRST ANIMATION (CIRCLES)
     const leftTopCircleMove = document.querySelector(".circle-plain-left");
     const rigthTopCircleMove = document.querySelector(".circle-plain-right");
