@@ -542,4 +542,16 @@ nav.nav-top ul li:nth-child(2) {
     stroke-dashoffset: 0;
   }
 }
+
+@-webkit-keyframes transition {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transition {
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=main.css.map */
