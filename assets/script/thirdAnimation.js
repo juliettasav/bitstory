@@ -79,6 +79,11 @@ window.addEventListener('scroll', () => {
         if(value >= 1600)
         {
             centerSmall.style.transform = `translateY(0px)`;
+
+        }
+        if(value >= 1800)
+        {
+            centerRightL.style.transform = `translateY(0px)`;
             blackBlocksStroke.forEach(el => {
                 el.style.stroke = `black`;
             })
@@ -90,16 +95,11 @@ window.addEventListener('scroll', () => {
                 el.style.stroke = `#efefef`
                 el.style.strokeDasharray = "3000";
                 el.style.strokeDashoffset = "3000";
-               
                 el.style.animation = "lineSquare 2s cubic-bezier(0.12, 0, 0.39, 0)";
             })
             allLines.forEach(line => {
                 line.style.stroke = `#efefef`;
             });
-        }
-        if(value >= 1800)
-        {
-            centerRightL.style.transform = `translateY(0px)`;
         }
         if (value >= 2400)
         {
