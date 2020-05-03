@@ -103,11 +103,19 @@ window.addEventListener('scroll', () => {
     
     let scrollValue = window.pageYOffset;
 
-    if(scrollValue > 0) {
-        leftTopCircleMove.style.left = `calc(100% - 155px + ${scrollValue / 2}px)`;
-        rigthTopCircleMove.style.top = `-${scrollValue / 2}px`;
-        leftBottomCircleMove.style.bottom = `-${scrollValue / 2}px`
-        rigthBottomCircleMove.style.right = `calc(100% - 155px + ${scrollValue / 2}px)`
+    if(scrollValue > 0) 
+    {
+        leftTopCircleMove.style.left = `calc(100% - 155px + ${scrollValue}px)`;
+        rigthTopCircleMove.style.top = `-${scrollValue}px`;
+        leftBottomCircleMove.style.bottom = `-${scrollValue}px`
+        rigthBottomCircleMove.style.right = `calc(100% - 155px + ${scrollValue}px)`
+    } else
+    {
+        leftTopCircleMove.style.left = "calc(100% - 155px)";
+        rigthTopCircleMove.style.right = "calc(75% - 155px)";
+        rigthBottomCircleMove.style.right = "calc(100% - 155px)"
+        leftBottomCircleMove.style.left = "calc(75% - 155px)";
+
     }
 
 
@@ -133,13 +141,40 @@ window.addEventListener('scroll', () => {
     const twlvriangle  = document.querySelector("g#_x31_2 > polygon");
     const thrteenTriangle  = document.querySelector("g#_x31_3 > polygon");
     const fourteenTriangle  = document.querySelector("g#_x31_4 > polygon");
+    const HorizontalLeft = document.querySelector("#Horizontal-Left-About");
+    const HorizontalLeftSecond = document.querySelector("#Horizontal-Left-About_2_");
+    const VerticalCenterAbout = document.querySelector("#Vertical-Center-About");
+    const VerticalRightAbout = document.querySelector("#Vertical-Right-About");
+    const HorizontalSmallTopAbout = document.querySelector("#Horizontal-Small-Top-About");
+    const HorizontalSmallBottomAbout = document.querySelector("#Horizontal-Small-Bottom-About");
 
 
-    // console.log(firstTriangle.hasAttribute("points"));
     let value = scrollValue - size;
     if(scrollValue >= size)
     {
         if(value < 117) {
+            // Animate All Strokes
+            HorizontalLeft.style.animation = "lineDashSecond 2.5s linear forwards";
+            HorizontalLeft.style.strokeDasharray = "4000";
+            HorizontalLeft.style.strokeDashoffset = "4000";
+            HorizontalLeftSecond.style.animation = "lineDashSecond 2.5s .3s linear forwards";
+            HorizontalLeftSecond.style.strokeDasharray = "4000";
+            HorizontalLeftSecond.style.strokeDashoffset = "4000";
+            VerticalCenterAbout.style.animation = "lineDashSecond 2.5s .5s linear forwards";
+            VerticalCenterAbout.style.strokeDasharray = "4000";
+            VerticalCenterAbout.style.strokeDashoffset = "4000";
+            VerticalRightAbout.style.animation = "lineDashSecond 2.5s .7s linear forwards";
+            VerticalRightAbout.style.strokeDasharray = "4000";
+            VerticalRightAbout.style.strokeDashoffset = "4000";
+            HorizontalSmallTopAbout.style.animation = "lineDashSecond 2s .8s linear forwards";
+            HorizontalSmallTopAbout.style.strokeDasharray = "4000";
+            HorizontalSmallTopAbout.style.strokeDashoffset = "4000";
+            HorizontalSmallBottomAbout.style.animation = "lineDashSecond 2s 1s linear forwards";
+            HorizontalSmallBottomAbout.style.strokeDasharray = "4000";
+            HorizontalSmallBottomAbout.style.strokeDashoffset = "4000";
+            
+
+
             firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 ${351.1 + (value * 3)},${697.7 + (value * 3)}`);
             secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 ${1048.9 - (value * 3)},${697.7 - (value * 3)}`);
             thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,697.7`);
@@ -291,11 +326,21 @@ window.addEventListener('scroll', () => {
     const centerTopLarge = document.querySelector("rect#Block-Center-Top-Left-L");
     const centerSmall = document.querySelector("rect#Square-CENTER");
     const centerRightL = document.querySelector("rect#Block-Center-Right-L");
-    const blackBlocks = document.querySelectorAll(".black");
+    const blackBlocksStroke = document.querySelectorAll(".black");
     const rigthBlock = document.querySelector("#Rigth-Block");
     const allLines = document.querySelectorAll(".st0");
     const size = document.documentElement.clientHeight;
     const thirdAnimationSrart = size * 2;
+
+    const verticalRightCreate = document.querySelector("#vertical_right-Create");
+    const horizontalCreate = document.querySelector("#Horizontal-Create");
+    const verticalCentralCreate = document.querySelector("#Vertical_Central-Create");
+    const verticalRightCreateSmall = document.querySelector("#Vertical_Right-Create");
+    const horizontalSmallDownCreate = document.querySelector("#Horizontal_small_down-Create");
+    const horizontalLowerCreate = document.querySelector("#Horizontal_Lower-Create");
+    const verticalSmallCentrleftCreate = document.querySelector("#Vertical_Small_Centr-left-Create");
+
+    
     
     
     if(scrollValue >= thirdAnimationSrart)
@@ -304,6 +349,32 @@ window.addEventListener('scroll', () => {
         let value = (scrollValue - thirdAnimationSrart) * 4;
         leftTopBigObj.style.transform = `translateY(-${value}px)`;
         leftBottomBigObj.style.transform = `translateY(${1400 - value}px)`
+        
+
+        verticalRightCreate.style.animation = "lineDashSecond 2s linear forwards";
+        verticalRightCreate.style.strokeDasharray = "4000";
+        verticalRightCreate.style.strokeDashoffset = "4000";
+        horizontalCreate.style.animation = "lineDashSecond 2s .1s linear forwards";
+        horizontalCreate.style.strokeDasharray = "4000";
+        horizontalCreate.style.strokeDashoffset = "4000";
+        verticalCentralCreate.style.animation = "lineDashSecond 2s .3s linear forwards";
+        verticalCentralCreate.style.strokeDasharray = "4000";
+        verticalCentralCreate.style.strokeDashoffset = "4000";
+        verticalRightCreateSmall.style.animation = "lineDashSecond 2s .4s linear forwards";
+        verticalRightCreateSmall.style.strokeDasharray = "4000";
+        verticalRightCreateSmall.style.strokeDashoffset = "4000";
+        horizontalSmallDownCreate.style.animation = "lineDashSecond 2s .5s linear forwards";
+        horizontalSmallDownCreate.style.strokeDasharray = "4000";
+        horizontalSmallDownCreate.style.strokeDashoffset = "4000";
+        verticalSmallCentrleftCreate.style.animation = "lineDashSecond 2s .6s linear forwards";
+        verticalSmallCentrleftCreate.style.strokeDasharray = "4000";
+        verticalSmallCentrleftCreate.style.strokeDashoffset = "4000";
+        horizontalLowerCreate.style.animation = "lineDashSecond 2s .7s linear forwards";
+        horizontalLowerCreate.style.strokeDasharray = "4000";
+        horizontalLowerCreate.style.strokeDashoffset = "4000";
+       
+        
+        
         if(value >= 50)
         {
             leftTopSmall.style.transform = `translateY(${1400 - (value - 100)}px)`
@@ -325,15 +396,19 @@ window.addEventListener('scroll', () => {
         if(value >= 1600)
         {
             centerSmall.style.transform = `translateY(0px)`;
-            blackBlocks.forEach(el => {
-                el.style.stroke = `black`
+            blackBlocksStroke.forEach(el => {
+                el.style.stroke = `black`;
             })
             allLines.forEach(line => {
                 line.style.stroke = `transparent`;
             });
         } else {
-            blackBlocks.forEach(el => {
+            blackBlocksStroke.forEach(el => {
                 el.style.stroke = `#efefef`
+                el.style.strokeDasharray = "3000";
+                el.style.strokeDashoffset = "3000";
+               
+                el.style.animation = "lineSquare 2s cubic-bezier(0.12, 0, 0.39, 0)";
             })
             allLines.forEach(line => {
                 line.style.stroke = `#efefef`;
@@ -359,6 +434,3 @@ window.addEventListener('scroll', () => {
     }
     
 })
-
-// THIRD ANIMATION 
-// FOURTH ANIMATION 

@@ -292,6 +292,10 @@ nav.nav-top ul li:nth-child(2) {
   width: 510px;
 }
 
+.we-create__animation .ubi-svg {
+  overflow: visible;
+}
+
 .we-create__animation .ubi-svg #Rigth-Block {
   -webkit-transform: translateY(1400px);
           transform: translateY(1400px);
@@ -488,6 +492,30 @@ nav.nav-top ul li:nth-child(2) {
   }
   100% {
     stroke-dashoffset: 3000;
+  }
+}
+
+@-webkit-keyframes lineDashSecond {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 4000;
+  }
+}
+
+@keyframes lineDashSecond {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 4000;
   }
 }
 
