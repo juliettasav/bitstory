@@ -402,10 +402,8 @@ window.addEventListener('scroll', () => {
         {
             centerSmall.style.transform = `translateY(${790 - (value - 800)}px)`
             centerRightL.style.transform = `translateY(${790 - (value - 1000)}px)`
+            rigthBlock.style.transform = `translateY(${2400 - (value)}px)`
             
-        }
-        if (value >= 150) {
-            rigthBlock.style.transform = `translateY(${1400 - (value - 600)}px)`
         }
         if(value >= 1400) {
             leftTopBigObj.style.transform = `translateY(-1400px)`;
@@ -436,7 +434,7 @@ window.addEventListener('scroll', () => {
         {
             centerRightL.style.transform = `translateY(0px)`;
         }
-        if (value >= 2000)
+        if (value >= 2400)
         {
             rigthBlock.style.transform = `translateY(0px)`;
         }

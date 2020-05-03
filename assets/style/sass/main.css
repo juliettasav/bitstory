@@ -297,8 +297,8 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .we-create__animation .ubi-svg #Rigth-Block {
-  -webkit-transform: translateY(1400px);
-          transform: translateY(1400px);
+  -webkit-transform: translateY(2000px);
+          transform: translateY(2000px);
 }
 
 .we-create__animation .ubi-svg #Square-CENTER rect {
