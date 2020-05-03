@@ -353,6 +353,7 @@ window.addEventListener('scroll', () => {
     const horizontalSmallDownCreate = document.querySelector("#Horizontal_small_down-Create");
     const horizontalLowerCreate = document.querySelector("#Horizontal_Lower-Create");
     const verticalSmallCentrleftCreate = document.querySelector("#Vertical_Small_Centr-left-Create");
+    const verticalSmallRightCreate = document.querySelector("#vertical_small_right-Create");
 
     
     
@@ -383,7 +384,10 @@ window.addEventListener('scroll', () => {
         verticalSmallCentrleftCreate.style.animation = "lineDashSecond 2s .6s linear forwards";
         verticalSmallCentrleftCreate.style.strokeDasharray = "4000";
         verticalSmallCentrleftCreate.style.strokeDashoffset = "4000";
-        horizontalLowerCreate.style.animation = "lineDashSecond 2s .7s linear forwards";
+        verticalSmallRightCreate.style.animation = "lineDashSecond 2s .7s linear forwards";
+        verticalSmallRightCreate.style.strokeDasharray = "4000";
+        verticalSmallRightCreate.style.strokeDashoffset = "4000";
+        horizontalLowerCreate.style.animation = "lineDashSecond 2s .8s linear forwards";
         horizontalLowerCreate.style.strokeDasharray = "4000";
         horizontalLowerCreate.style.strokeDashoffset = "4000";
        
