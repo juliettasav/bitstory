@@ -9,11 +9,12 @@ window.addEventListener("scroll", () => {
     const allCircles = document.querySelectorAll(".innovate__circles");
     const allMask = document.querySelectorAll("mask");
     const value = window.pageYOffset - 2600;
-    const circlPostion = 20 - value;
-    console.log(allMask);
+    const circlPostion = 20 - value;  
+    // console.log(circlPostion);
     
+
     
-    if(circlPostion > 5)
+    if(circlPostion > 5 && circlPostion <= 355)
 
     {
         sixCircle.style.transform = `translateX(-${circlPostion}px)`;
@@ -22,27 +23,28 @@ window.addEventListener("scroll", () => {
         thirdCircle.style.transform = `translateX(${circlPostion}px)`;
         fifthCircle.style.transform = `translate(-${circlPostion}px, ${circlPostion}px)`;
         secondCircle.style.transform = `translate(${circlPostion}px, -${circlPostion}px)`;
-        
+
+        let id = 1;
+
         allBlocks.forEach(element => {
             element.style.opacity = "1";
+            element.style.animation =`lineDashSecond 2s .${id}s linear forwards`;
+            id++;
         })
+
         allCircles.forEach(element => {
             element.style.fill = "none";
             element.setAttribute("mask", "none");
             element.style.animation = "none";
 
         })
-        //  allCircles.forEach(element => {
-        //     element.style.transform = "scale(0)";
-        // })
+
     } else if (circlPostion <= 5 && circlPostion > 0)
     {
 
         allBlocks.forEach(element => {
             element.style.opacity = "0";
         });
-        
-       
         
     }
     else 
@@ -62,7 +64,7 @@ window.addEventListener("scroll", () => {
         allCircles.forEach(element => {
             element.style.fill = "#efefef";
             element.setAttribute("mask", `url(#mask-${id})`)
-            element.style.animation = `scaleUp .4s .${id}s cubic-bezier(0.33, 1, 0.68, 1)`;
+            element.style.animation = `scaleUp .4s .0${id}s cubic-bezier(0.33, 1, 0.68, 1)`;
             id--;
         })
         allMask.forEach(el => {
@@ -71,18 +73,6 @@ window.addEventListener("scroll", () => {
 
     }
 
-    // if (circlPostion <= 5 && circlPostion >= 1) 
-    // {
-
-    //     allBlocks.forEach(element => {
-    //         element.style.opacity = "0";
-    //     });
-    //     allCircles.forEach(element => {
-    //         element.style.transform = "scale(0.2)";
-    //     })
-        
-        
-
-    // }
+    
     
 })
