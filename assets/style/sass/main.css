@@ -354,9 +354,10 @@ nav.nav-top ul li:nth-child(2) {
           transform: translateY(2000px);
 }
 
-mask {
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
+mask rect {
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out .5s;
+  transition: opacity ease-in-out .5s;
 }
 
 .innovate {
@@ -376,6 +377,10 @@ mask {
 .innovate__animation {
   margin: 0 auto;
   width: 450px;
+}
+
+.innovate__animation svg {
+  overflow: visible;
 }
 
 .innovate__circles {
@@ -604,28 +609,6 @@ mask {
 @keyframes transition {
   100% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes scaleUp {
-  from {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes scaleUp {
-  from {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -7,7 +7,8 @@ window.addEventListener("scroll", () => {
     const firstCircle = document.querySelector("#c1_1_ > circle");
     const allBlocks = document.querySelectorAll(".innovate__block");
     const allCircles = document.querySelectorAll(".innovate__circles");
-    const allMask = document.querySelectorAll("mask");
+    const allMask = document.querySelectorAll(".fill-white");
+
     const value = window.pageYOffset - 2600;
     const circlPostion = 20 - value;  
     // console.log(circlPostion);
@@ -64,11 +65,11 @@ window.addEventListener("scroll", () => {
         allCircles.forEach(element => {
             element.style.fill = "#efefef";
             element.setAttribute("mask", `url(#mask-${id})`)
-            element.style.animation = `scaleUp .4s .0${id}s cubic-bezier(0.33, 1, 0.68, 1)`;
+            // element.style.animation = `scaleUp .4s .0${id}s cubic-bezier(0.33, 1, 0.68, 1)`;
             id--;
         })
         allMask.forEach(el => {
-            // el.style.animation = `scaleUp 1s .${id}s cubic-bezier(0.33, 1, 0.68, 1)`;
+            el.style.opacity = `1`;
         })
 
     }
