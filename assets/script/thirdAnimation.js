@@ -114,7 +114,6 @@ window.addEventListener('scroll', () => {
         {
             rigthBlock.style.transform = `translateY(0px)`;
         }
-        console.log(value);
         
         if (value >= 3500)
         {
