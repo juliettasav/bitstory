@@ -21,6 +21,24 @@ window.addEventListener('scroll', () => {
     const VerticalRightAbout = document.querySelector("#Vertical-Right-About");
     const HorizontalSmallTopAbout = document.querySelector("#Horizontal-Small-Top-About");
     const HorizontalSmallBottomAbout = document.querySelector("#Horizontal-Small-Bottom-About");
+    const rightSide = document.querySelector("g#right-side");
+    const leftSide = document.querySelector("g#left-side");
+
+    thirdTriangle.style.transform = "translateY(-0.5px)"
+    fourthTriangle.style.transform = "translateY(1px)"
+    fifthTriangle.style.transform = "translateY(1px)"
+    sixthTriangle.style.transform = "translateY(-1.5px)"
+    sevenTriangle.style.transform = "translateX(-1px)"
+    eightTriangle.style.transform = "translateY(1.5px)"
+    ninthTriangle.style.transform = "translateY(-2.5px)"
+    tenTriangle.style.transform = "translateX(0.5px)"
+    elvnTriangle.style.transform = "translateX(-2.3px)"
+    twlvriangle.style.transform = "translateX(2px)"
+    thrteenTriangle.style.transform = "translateY(-1px)"
+    fourteenTriangle.style.transform = "translateY(1px)"
+
+    rightSide.style.transform = `translate(0px, 0px)`;
+    leftSide.style.transform = `translate(0px, 0px)`;
 
 
     let value = scrollValue - size;
@@ -74,6 +92,7 @@ window.addEventListener('scroll', () => {
             secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
             thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,${697.7 + (secondValue * 3) }`);
             fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,${697.7 - (secondValue * 3)}`);
+            
             thirdTriangle.style.opacity = "1";
             fourthTriangle.style.opacity = "1";
             fifthTriangle.setAttribute("points", `700,348.9 872.45,521.3 1048.9,697.7`);
@@ -159,9 +178,9 @@ window.addEventListener('scroll', () => {
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
         }
-        else if (value > 466 && value < 525)
+        else if (value > 466 && value < 565)
         {
-            let secondValue = value - 408;
+            let secondValue = value - 466;
             firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
             secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
             thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,1046.6`);
@@ -179,7 +198,7 @@ window.addEventListener('scroll', () => {
             thrteenTriangle.style.opacity = "1";
             fourteenTriangle.style.opacity = "1";
         }
-        else if (value >= 525)
+        else if (value >= 565)
         {
             firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
             secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
@@ -195,7 +214,13 @@ window.addEventListener('scroll', () => {
             twlvriangle.setAttribute("points", `351.1,1046.6 2.3,1046.6 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1395.4`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,0`);
+            
+            rightSide.style.transform = `translate(${value - 565}px, -${value - 565}px)`;
+            leftSide.style.transform = `translate(-${value - 565}px, ${value - 565}px)`;
         }
+
+            
+
          
         
     }

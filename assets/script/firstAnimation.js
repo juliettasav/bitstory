@@ -38,7 +38,7 @@ window.onload = (e) => {
     
     setTimeout(() => {
         rightTopStroke.style.stroke = "none";
-        rigthBottomCircleMove.style.right = "calc(100% - 155px)"
+        rigthBottomCircleMove.style.right = "calc(100% - 156px)"
         leftBottomCircleMove.style.left = "calc(75% - 155px)";
         rightBottomCircle.style.fill = "#efefef";
         leftBottomHalfCircle.style.fill = "#efefef";
@@ -68,11 +68,11 @@ window.addEventListener('scroll', () => {
         leftTopCircleMove.style.left = `calc(100% - 155px + ${scrollValue}px)`;
         rigthTopCircleMove.style.top = `-${scrollValue}px`;
         leftBottomCircleMove.style.bottom = `-${scrollValue}px`;
-        rigthBottomCircleMove.style.right = `calc(100% - 155px + ${scrollValue}px)`;
+        rigthBottomCircleMove.style.right = `calc(100% - 156px + ${scrollValue}px)`;
     } 
     else
     {
-        rigthBottomCircleMove.style.right = "calc(100% - 155px)";
+        rigthBottomCircleMove.style.right = "calc(100% - 156px)";
         leftTopCircleMove.style.left = "calc(100% - 155px)";
         rigthTopCircleMove.style.top = "0";
         leftBottomCircleMove.style.bottom = "0";

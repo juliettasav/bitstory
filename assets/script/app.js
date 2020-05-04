@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
 
     // Get the size of user's screen
     const size = document.documentElement.clientHeight;
-    const secondSectionValue = size * 2;
+    const secondSectionValue = size * 2 + 200;
     let scrollValue = window.pageYOffset;
     
     //Making some conditions on showing with opacity style

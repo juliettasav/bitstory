@@ -19,7 +19,7 @@
 
 .wrapper
     background-color: #000
-    height: 400vh
+    height: 500vh
     overflow: scroll
     &::-webkit-scrollbar-thumb
         background-color: #F5F5F5
@@ -179,11 +179,13 @@ nav.nav-top
     &__animation
         margin: 0 auto
         width: 510px
+        svg
+            overflow: visible
 
 
 // THIRD SECTION
 .we-create
-    height: 100vh
+    height: 200vh
     padding: 100px 0
     width: 100%
     position: fixed
@@ -195,18 +197,21 @@ nav.nav-top
         .ubi-svg
             overflow: visible
             #Rigth-Block
-                transform: translateY(2000px)
+                transform: translateY(2400px)
             #Square-CENTER
                 rect
-                    transform: translateY(790px)
+                    transform: translateY(1400px)
                     z-index: 1
+            #Block-Center-Right-L
+                rect
+                    transform: translateY(1800px)
             #Block-Center-Right-L-Black
                 rect 
                     fill: black
                     z-index: 0
             #Block-Center-Top-Left-L
                 rect 
-                    transform: translateY(1400px)
+                    transform: translateY(2000px)
             #Block-Center-Top-Left-L-Black
                 rect
                     fill: black
@@ -217,14 +222,15 @@ nav.nav-top
                     stroke: #efefef
             g#Block-Left-Top
                 rect
-                    transform: translateY(1400px)
+                    transform: translateY(1800px)
             #Block-Left-Bottom
                 rect 
                     // animation: goGo 2s cubic-bezier(0.33, 1, 0.68, 1)
+                    transform: translateY(1400px)
                     fill: #efefef
             #Block-Utekai
                 rect 
-                    transform: translateY(1400px)
+                    transform: translateY(2000px)
                     // animation: bottomGo 2s cubic-bezier(0.33, 1, 0.68, 1)
         
 // Animation CSS

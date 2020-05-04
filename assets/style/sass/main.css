@@ -16,7 +16,7 @@
 
 .wrapper {
   background-color: #000;
-  height: 400vh;
+  height: 500vh;
   overflow: scroll;
 }
 
@@ -277,8 +277,12 @@ nav.nav-top ul li:nth-child(2) {
   width: 510px;
 }
 
+.about__animation svg {
+  overflow: visible;
+}
+
 .we-create {
-  height: 100vh;
+  height: 200vh;
   padding: 100px 0;
   width: 100%;
   position: fixed;
@@ -297,14 +301,19 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .we-create__animation .ubi-svg #Rigth-Block {
-  -webkit-transform: translateY(2000px);
-          transform: translateY(2000px);
+  -webkit-transform: translateY(2400px);
+          transform: translateY(2400px);
 }
 
 .we-create__animation .ubi-svg #Square-CENTER rect {
-  -webkit-transform: translateY(790px);
-          transform: translateY(790px);
+  -webkit-transform: translateY(1400px);
+          transform: translateY(1400px);
   z-index: 1;
+}
+
+.we-create__animation .ubi-svg #Block-Center-Right-L rect {
+  -webkit-transform: translateY(1800px);
+          transform: translateY(1800px);
 }
 
 .we-create__animation .ubi-svg #Block-Center-Right-L-Black rect {
@@ -313,8 +322,8 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .we-create__animation .ubi-svg #Block-Center-Top-Left-L rect {
-  -webkit-transform: translateY(1400px);
-          transform: translateY(1400px);
+  -webkit-transform: translateY(2000px);
+          transform: translateY(2000px);
 }
 
 .we-create__animation .ubi-svg #Block-Center-Top-Left-L-Black rect {
@@ -328,17 +337,19 @@ nav.nav-top ul li:nth-child(2) {
 }
 
 .we-create__animation .ubi-svg g#Block-Left-Top rect {
-  -webkit-transform: translateY(1400px);
-          transform: translateY(1400px);
+  -webkit-transform: translateY(1800px);
+          transform: translateY(1800px);
 }
 
 .we-create__animation .ubi-svg #Block-Left-Bottom rect {
+  -webkit-transform: translateY(1400px);
+          transform: translateY(1400px);
   fill: #efefef;
 }
 
 .we-create__animation .ubi-svg #Block-Utekai rect {
-  -webkit-transform: translateY(1400px);
-          transform: translateY(1400px);
+  -webkit-transform: translateY(2000px);
+          transform: translateY(2000px);
 }
 
 @-webkit-keyframes goGo {

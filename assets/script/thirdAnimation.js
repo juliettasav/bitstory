@@ -1,6 +1,8 @@
 window.addEventListener('scroll', () => {
     let scrollValue = window.pageYOffset;
     const secondSection =  document.querySelector("section.about").offsetHeight;
+    const firstSection =  document.querySelector("section.intro").offsetHeight;
+    const animationSVG = document.querySelector(".we-create__animation > svg");
     const leftTopBigObj = document.querySelector(".block-left-bottom");
     const leftBottomBigObj = document.querySelector("rect#Block-Utekai");
     const leftTopSmall = document.querySelector("rect#Block-Left-Top");
@@ -11,8 +13,10 @@ window.addEventListener('scroll', () => {
     const rigthBlock = document.querySelector("#Rigth-Block");
     const allLines = document.querySelectorAll(".st0");
     const size = document.documentElement.clientHeight;
-    const thirdAnimationSrart = size * 2;
+    const thirdAnimationSrart = size * 2 + 200;
 
+    
+    
     const verticalRightCreate = document.querySelector("#vertical_right-Create");
     const horizontalCreate = document.querySelector("#Horizontal-Create");
     const verticalCentralCreate = document.querySelector("#Vertical_Central-Create");
@@ -22,15 +26,12 @@ window.addEventListener('scroll', () => {
     const verticalSmallCentrleftCreate = document.querySelector("#Vertical_Small_Centr-left-Create");
     const verticalSmallRightCreate = document.querySelector("#vertical_small_right-Create");
 
-    
-    
-    
     if(scrollValue >= thirdAnimationSrart)
     {
 
-        let value = (scrollValue - thirdAnimationSrart) * 4;
-        leftTopBigObj.style.transform = `translateY(-${value}px)`;
-        leftBottomBigObj.style.transform = `translateY(${1400 - value}px)`
+        let value = (scrollValue - thirdAnimationSrart) * 5;
+        leftTopBigObj.style.transform = `translateY(${1400 - value}px)`;
+        leftBottomBigObj.style.transform = `translateY(${2800 - value}px)`
         
 
         verticalRightCreate.style.animation = "lineDashSecond 2s linear forwards";
@@ -60,28 +61,28 @@ window.addEventListener('scroll', () => {
        
         
         
-        if(value >= 50)
+        if(value >= 900)
         {
-            leftTopSmall.style.transform = `translateY(${1400 - (value - 100)}px)`
-            centerTopLarge.style.transform = `translateY(${1400 - (value - 200)}px)`;
+            leftTopSmall.style.transform = `translateY(${1800 - (value - 1100)}px)`
+            centerTopLarge.style.transform = `translateY(${2000 - (value - 1150)}px)`;
         }
-        if(value >= 100)
+        if(value >= 1050)
         {
-            centerSmall.style.transform = `translateY(${790 - (value - 800)}px)`
-            centerRightL.style.transform = `translateY(${790 - (value - 1000)}px)`
-            rigthBlock.style.transform = `translateY(${2400 - (value)}px)`
+            centerSmall.style.transform = `translateY(${1400 - (value - 1400)}px)`
+            centerRightL.style.transform = `translateY(${1800 - (value - 1000)}px)`
+            rigthBlock.style.transform = `translateY(${2400 - (value - 1000)}px)`
             
         }
-        if(value >= 1400) {
+        if(value >= 2800) {
             leftTopBigObj.style.transform = `translateY(-1400px)`;
             leftBottomBigObj.style.transform = `translateY(0px)`;
         }
-        if(value >= 1600)
+        if(value >= 2800)
         {
             centerSmall.style.transform = `translateY(0px)`;
 
         }
-        if(value >= 1800)
+        if(value >= 2800)
         {
             centerRightL.style.transform = `translateY(0px)`;
             blackBlocksStroke.forEach(el => {
@@ -101,17 +102,23 @@ window.addEventListener('scroll', () => {
                 line.style.stroke = `#efefef`;
             });
         }
-        if (value >= 2400)
-        {
-            rigthBlock.style.transform = `translateY(0px)`;
-        }
-        if(value >= 1200)
+        if(value >= 2800)
         {
             centerTopLarge.style.transform = `translateY(360px)`;
         }
-        if(value - 100 >= 1400)
+        if(value >= 2900)
         {
             leftTopSmall.style.transform = `translateY(0px)`;
+        }
+        if (value >= 3400)
+        {
+            rigthBlock.style.transform = `translateY(0px)`;
+        }
+        console.log(value);
+        
+        if (value >= 3500)
+        {
+            animationSVG.style.transform = `translateY(-${(value - 3500) / 2}px)`;
         }
 
     }
