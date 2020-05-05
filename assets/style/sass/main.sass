@@ -157,16 +157,22 @@ nav.nav-top
                 color: #efefef
                 font-family: 'Lato', sans-serif
                 font-weight: 600
-                padding: 10px 0
+                padding: 5px 0
                 letter-spacing: 6px
+                opacity: 0
+                transition: opacity cubic-bezier(0.32, 0, 0.67, 0) .5s, transform cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s .2s
                 @media screen and (max-width: 425px)
                     font-size: 21px
                     padding: 0
                     text-align: center
                     line-height: 1.52
                     letter-spacing: 2.1px
+            p:first-child
+                transform: translateY(-20px)
             p:last-child
-                padding-bottom: 43px 
+                
+                transform: translateY(-20px)
+
         &__arrow
             @media screen and (max-width: 768px)
                 display: none
@@ -514,10 +520,10 @@ mask
     100%
         opacity: 1
 
-// @keyframes opacity
-//     from
-//         transform: scale(0.1)
-//     to
-//         transform: scale(1)
+@keyframes text-p
+    from
+        opacity: 0.2
+    to
+        opacity: 1
         
         

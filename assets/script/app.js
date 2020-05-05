@@ -82,3 +82,16 @@ document.querySelector(".mob-menu").addEventListener('click', (e) => {
     }
     e.target.classList.toggle("mob-menu__active");
 })
+
+
+const pFirst = document.querySelector("#p1");
+const pSecond = document.querySelector("#p2");
+setTimeout(() => {
+    pFirst.style.transform = "translateY(0px)";
+    pFirst.style.opacity = "1"
+    
+}, 200)
+setTimeout(() => {
+    pSecond.style.transform = "translateY(0px)";
+    pSecond.style.opacity = "1"
+}, 500)
