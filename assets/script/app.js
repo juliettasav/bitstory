@@ -60,12 +60,25 @@ window.addEventListener('scroll', () => {
         thirdSection.style.zIndex = "0";
         fourthSection.style.opacity = "1";
         fourthSection.style.zIndex = "1";
-        // console.log();
-        
 
 
     }
-    
-    
 
+})
+
+// Mob Menu Animation
+
+document.querySelector(".mob-menu").addEventListener('click', (e) => {
+    e.preventDefault();
+    const menu = document.querySelector("nav > ul");
+    menu.classList.toggle("active");
+    if(menu.classList.contains("active"))
+    {
+        menu.style.right = '0';  
+    }
+    else 
+    {
+        menu.style.right = '-100%';   
+    }
+    e.target.classList.toggle("mob-menu__active");
 })

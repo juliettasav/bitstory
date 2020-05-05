@@ -11,7 +11,10 @@ window.addEventListener("scroll", () => {
 
     const value = window.pageYOffset - 2600;
     const circlPostion = 20 - value;  
-    // console.log(circlPostion);
+
+    allBlocks.forEach(el => {
+        el.style.transition = "opacity ease-in-out .2s";
+    })
     
 
     
@@ -62,12 +65,15 @@ window.addEventListener("scroll", () => {
         secondCircle.style.transform = `translate(0px, 0px)`;
         
         let id = 6;
+        
         allCircles.forEach(element => {
-            element.style.fill = "#efefef";
-            element.setAttribute("mask", `url(#mask-${id})`)
-            // element.style.animation = `scaleUp .4s .0${id}s cubic-bezier(0.33, 1, 0.68, 1)`;
+
+                element.style.fill = "#efefef";
+                element.setAttribute("mask", `url(#mask-${id})`)
             id--;
+
         })
+        
         allMask.forEach(el => {
             el.style.opacity = `1`;
         })

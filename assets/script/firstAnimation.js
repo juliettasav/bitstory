@@ -1,3 +1,5 @@
+const circleWidth = document.querySelector('.circle-plain').clientWidth;
+console.log(window.innerWidth);
 window.onload = (e) => {
     e.preventDefault();
 
@@ -14,20 +16,38 @@ window.onload = (e) => {
     const leftBottomHalfCircle = leftBottomCircleMove.childNodes[4].childNodes[0];
     const leftBottomStroke = leftBottomCircleMove.childNodes[2].childNodes[0];
 
+
     
     setTimeout(() => {
         leftBottomHalfCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
-        leftBottomCircleMove.style.animation = "left-right-bottom 2s ease";
-        rigthBottomCircleMove.style.animation = "right-left-bottom 2s cubic-bezier(0.76, 0, 0.24, 1)";
         rightBottomCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)"
+        if (window.innerWidth > 1440)
+        {
+            leftBottomCircleMove.style.animation = "left-right-bottom-1920 2s ease";
+            rigthBottomCircleMove.style.animation = "right-left-bottom-1920 2s cubic-bezier(0.76, 0, 0.24, 1)";
+        } 
+        else
+        {
+            leftBottomCircleMove.style.animation = "left-right-bottom-1440 2s ease";
+            rigthBottomCircleMove.style.animation = "right-left-bottom-1440 2s cubic-bezier(0.76, 0, 0.24, 1)";
+        }
 
     }, 700)
     
     setTimeout(() => {
-        leftTopCircleMove.style.animation = "left-right-top 2s cubic-bezier(0.76, 0, 0.24, 1)";
-        rigthTopCircleMove.style.animation = "right-left-top 2s ease";
+        
         leftTopCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         rightTopHalfCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
+        if (window.innerWidth > 1440)
+        {
+            leftTopCircleMove.style.animation = "left-right-top-1920 2s cubic-bezier(0.76, 0, 0.24, 1)";
+            rigthTopCircleMove.style.animation = "right-left-top-1920 2s ease";
+        }
+        else 
+        {
+            leftTopCircleMove.style.animation = "left-right-top-1440 2s cubic-bezier(0.76, 0, 0.24, 1)";
+            rigthTopCircleMove.style.animation = "right-left-top-1440 2s ease";
+        }
         
     }, 1100);
 
@@ -38,16 +58,16 @@ window.onload = (e) => {
     
     setTimeout(() => {
         rightTopStroke.style.stroke = "none";
-        rigthBottomCircleMove.style.right = "calc(100% - 156px)"
-        leftBottomCircleMove.style.left = "calc(75% - 155px)";
+        rigthBottomCircleMove.style.right = `calc(100% - ${circleWidth + 1}px)`
+        leftBottomCircleMove.style.left = `calc(75% - ${circleWidth}px)`;
         rightBottomCircle.style.fill = "#efefef";
         leftBottomHalfCircle.style.fill = "#efefef";
 
     }, 2100)
 
     setTimeout(() => {
-        leftTopCircleMove.style.left = "calc(100% - 155px)";
-        rigthTopCircleMove.style.right = "calc(75% - 155px)";
+        leftTopCircleMove.style.left = `calc(100% - ${circleWidth}px)`;
+        rigthTopCircleMove.style.right = `calc(75% - ${circleWidth}px)`;
         leftTopCircle.style.fill = "#efefef";
         rightTopHalfCircle.style.fill = "#efefef";
     }, 2200)
@@ -65,15 +85,15 @@ window.addEventListener('scroll', () => {
 
     if(scrollValue > 0) 
     {
-        leftTopCircleMove.style.left = `calc(100% - 155px + ${scrollValue / 4}px)`;
+        leftTopCircleMove.style.left = `calc(100% - ${circleWidth}px + ${scrollValue / 4}px)`;
         rigthTopCircleMove.style.top = `-${scrollValue / 4}px`;
         leftBottomCircleMove.style.bottom = `-${scrollValue / 4}px`;
-        rigthBottomCircleMove.style.right = `calc(100% - 156px + ${scrollValue / 4}px)`;
+        rigthBottomCircleMove.style.right = `calc(100% - ${circleWidth + 1}px + ${scrollValue / 4}px)`;
     } 
     else
     {
-        rigthBottomCircleMove.style.right = "calc(100% - 156px)";
-        leftTopCircleMove.style.left = "calc(100% - 155px)";
+        rigthBottomCircleMove.style.right = `calc(100% - ${circleWidth + 1}px)`;
+        leftTopCircleMove.style.left = `calc(100% - ${circleWidth}px)`;
         rigthTopCircleMove.style.top = "0";
         leftBottomCircleMove.style.bottom = "0";
 

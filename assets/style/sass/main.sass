@@ -19,19 +19,21 @@
 
 .wrapper
     background-color: #000
-    height: 600vh
+    height: 500vh
     overflow: scroll
     &::-webkit-scrollbar-thumb
         background-color: #F5F5F5
 .container 
-    max-width: 1152px
+    max-width: 1440px
     margin: 0 auto
+    @media screen and (max-width: 1440px)
+        max-width: 1152px
     @media screen and (max-width: 1024px)
-        max-width: 950px
+        max-width: 864px
     @media screen and (max-width: 768px)
-        max-width: 700px
+        max-width: 623px
     @media screen and (max-width: 425px)
-        max-width: 300px
+        max-width: 290px
 
 
 // Header style
@@ -52,10 +54,56 @@ header
     img
         width: 64px
 nav.nav-top
+    .mob-menu 
+        display: none
+        width: 33px
+        height: 5px
+        margin-top: 10px
+        background-color: #efefef
+        position: relative
+        &::after, &::before
+            position: absolute
+            content: ''
+            display: block
+            width: 33px
+            height: 5px
+            background-color: #efefef
+        &::before
+            top: -10px
+            transition: transform ease-in-out .2s, top ease-in-out .2s .2s 
+        &::after
+            top: 10px
+            transition: transform ease-in-out .2s, top ease-in-out .2s .2s 
+        &__active
+            background-color: transparent
+            z-index: 1
+            // transition: all ease-in-out .2s 
+            &::before
+                transform: rotate(45deg)
+                background-color: black
+                top: 0
+                transition: top ease-in-out .2s, transform ease-in-out .2s .2s
+            &::after
+                transform: rotate(-45deg)
+                top: 0
+                background-color: black
+                transition: top ease-in-out .2s, transform ease-in-out .2s .2s
+            
+                
+            
+        @media screen and (max-width: 425px)
+            display: block
     ul
         text-align: right
         @media screen and (max-width: 425px)
-            display: none
+            display: block
+            position: absolute
+            height: 100vh
+            background-color: #efefef
+            top: 0
+            right: -100%
+            transition: right ease-in-out .2s
+            padding: 80px 20px 0 20px   
         li
             a
                 font-size: 21px
@@ -66,22 +114,43 @@ nav.nav-top
                 padding: 5px 0
                 opacity: .85
                 transition: all ease-in-out .2s
+                @media screen and (max-width: 425px)
+                    color: black
+                    position: relative
+                    // padding: 80px 20px 0 20px
+                &::after
+                    @media screen and (max-width: 425px)
+                        position: absolute
+                        content: ''
+                        display: block
+                        width: 0px
+                        height: 1px
+                        background-color: black
+                        transition: width ease-in-out .3s
             a:hover
                 color: #ffffff
                 opacity: 1
+                @media screen and (max-width: 425px)
+                    color: black
         li:nth-child(2)
             margin: 32px 0
+        li:hover a::after
+            width: 90px
+        
 .title
     position: fixed
     width: 100%
     bottom: 10%
     z-index: 3
+    @media screen and (max-width: 425px)
+        bottom: 0
     &__footer
         display: flex
         align-items: center
         justify-content: space-between
         @media screen and (max-width: 425px)
             padding-top: 40px
+            justify-content: center
         &__title
             p
                 font-size: 37px
@@ -90,9 +159,17 @@ nav.nav-top
                 font-weight: 600
                 padding: 10px 0
                 letter-spacing: 6px
+                @media screen and (max-width: 425px)
+                    font-size: 21px
+                    padding: 0
+                    text-align: center
+                    line-height: 1.52
+                    letter-spacing: 2.1px
             p:last-child
                 padding-bottom: 43px 
         &__arrow
+            @media screen and (max-width: 768px)
+                display: none
             img
                 width: 32px
                 opacity: .5
@@ -109,11 +186,34 @@ nav.nav-top
     transition: all ease-in-out .4s
     z-index: 1
     .container
-        padding-top: 200px
+        padding: 192px 0 128px 0
+        @media screen and (max-width: 1440px)
+            padding: 206px 0 192px
+        // @media screen and (max-width: 1024px)
+        //     padding: 950px
+        // @media screen and (max-width: 768px)
+        //     padding: 700px
+        @media screen and (max-width: 425px)
+            padding: 150px 0
     &__animation
-        width: 310px
+        width: 704px
+        @media screen and (max-width: 1440px)
+            width: 310px
+        // @media screen and (max-width: 1024px)
+        //     padding: 310px
+        // @media screen and (max-width: 768px)
+        //     padding: 700px
+        @media screen and (max-width: 425px)
+            width: 300px
         position: relative
         margin: 0 auto
+        @media screen and (max-width: 1024px)
+            margin: none
+            margin-left: 64px
+        @media screen and (max-width: 768px)
+            margin-left: 44.5px
+        @media screen and (max-width: 425px)
+            margin: 0 auto
         .grid-square
             rect.line.line-left-bottom, rect.line.line-right-bottom, .line-right-top
                 stroke-dasharray: 3000
@@ -135,7 +235,9 @@ nav.nav-top
                     // transform: rotate(180deg)
                     // transform-box: fill-box
         .circle-plain
-            width: 155px
+            width: 350px
+            @media screen and (max-width: 1440px)
+                width: 155px
             position: absolute
         .circle-plain-right
             right: 0
@@ -175,10 +277,27 @@ nav.nav-top
     z-index: 0
     transition: all ease-in-out .2s
     .container
-        padding-top: 100px
+        padding: 192px 0 128px 0
+        @media screen and (max-width: 1440px)
+            padding: 126px 0 192px
+        @media screen and (max-width: 768px)
+            padding: 192px 0
+        @media screen and (max-width: 425px)
+            padding: 150px 0
     &__animation
         margin: 0 auto
-        width: 510px
+        width: 704px
+        @media screen and (max-width: 1440px)
+            width: 510px
+        @media screen and (max-width: 1024px)
+            width: 410px
+            margin: none
+            margin-left: 64px
+        @media screen and (max-width: 768px)
+            width: 300px
+            margin-left: 44.5px
+        @media screen and (max-width: 425px)
+            margin: 0 auto
         svg
             overflow: visible
 
@@ -192,9 +311,28 @@ nav.nav-top
     opacity: 0
     z-index: 0
     transition: all ease-in-out .2s
+    .container
+        padding: 132px 0 128px 0
+        @media screen and (max-width: 1440px)
+            padding: 50px 0 192px
+        @media screen and (max-width: 1024px)
+            padding: 132px 0
+        @media screen and (max-width: 425px)
+            padding: 150px 0
     &__animation
         margin: 0 auto
-        width: 510px
+        width: 704px
+        @media screen and (max-width: 1440px)
+            width: 510px
+        @media screen and (max-width: 1024px)
+            width: 410px
+            margin: none
+            margin-left: 64px
+        @media screen and (max-width: 768px)
+            width: 300px
+            margin-left: 44.5px
+        @media screen and (max-width: 425px)
+            margin: 0 auto
         .ubi-svg
             overflow: visible
             #Rigth-Block
@@ -246,10 +384,27 @@ mask
     z-index: 0
     transition: all ease-in-out .2s
     .container
-        padding: 150px 0
+        padding: 192px 0 128px 0
+        @media screen and (max-width: 1440px)
+            padding: 126px 0 192px
+        @media screen and (max-width: 768px)
+            padding: 192px 0
+        @media screen and (max-width: 425px)
+            padding: 150px 0
     &__animation
         margin: 0 auto
-        width: 450px
+        width: 704px
+        @media screen and (max-width: 1440px)
+            width: 510px
+        @media screen and (max-width: 1024px)
+            width: 410px
+            margin: none
+            margin-left: 64px
+        @media screen and (max-width: 768px)
+            width: 300px
+            margin-left: 44.5px
+        @media screen and (max-width: 425px)
+            margin: 0 auto
         svg
             overflow: visible
     &__circles
@@ -272,25 +427,50 @@ mask
     to
         transform: translateY(0px)
 
-@keyframes left-right-top
+@keyframes left-right-top-1920
+    0%
+        left: 0
+    100%
+        left: calc(100% - 350px)
+
+
+@keyframes left-right-top-1440
     0%
         left: 0
     100%
         left: calc(100% - 155px)
 
-@keyframes right-left-top
+@keyframes right-left-top-1920
+    0%
+        right: 0
+    100%
+        right: calc(75% - 350px)
+
+@keyframes right-left-top-1440
     0%
         right: 0
     100%
         right: calc(75% - 155px)
 
-@keyframes left-right-bottom
+@keyframes left-right-bottom-1920
+    0%
+        left: 0
+    100%
+        left: calc(75% - 350px)
+
+@keyframes left-right-bottom-1440
     0%
         left: 0
     100%
         left: calc(75% - 155px)
 
-@keyframes right-left-bottom
+@keyframes right-left-bottom-1920
+    0%
+        right: 0
+    100%
+        right: calc(100% - 350px)
+
+@keyframes right-left-bottom-1440
     0%
         right: 0
     100%
