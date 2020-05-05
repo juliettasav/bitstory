@@ -94,4 +94,4 @@ setTimeout(() => {
 setTimeout(() => {
     pSecond.style.transform = "translateY(0px)";
     pSecond.style.opacity = "1"
-}, 500)
+}, 400)
