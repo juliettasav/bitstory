@@ -198,7 +198,7 @@ window.addEventListener('scroll', () => {
             thrteenTriangle.style.opacity = "1";
             fourteenTriangle.style.opacity = "1";
         }
-        else if (value >= 565)
+        else if (value >= 565 && value < 600)
         {
             firstTriangle.setAttribute("points", `351.1,697.7 700,697.7 700,1046.6`);
             secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
@@ -215,8 +215,10 @@ window.addEventListener('scroll', () => {
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1395.4`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,0`);
             
-            rightSide.style.transform = `translate(${value - 565}px, -${value - 565}px)`;
-            leftSide.style.transform = `translate(-${value - 565}px, ${value - 565}px)`;
+        } else if (value >= 600)
+        {
+            rightSide.style.transform = `translate(${value - 600}px, -${value - 600}px)`;
+            leftSide.style.transform = `translate(-${value - 600}px, ${value - 600}px)`;            
         }
 
             

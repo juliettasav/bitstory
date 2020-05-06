@@ -1,5 +1,4 @@
 const circleWidth = document.querySelector('.circle-plain').clientWidth;
-console.log(window.innerWidth);
 window.onload = (e) => {
     e.preventDefault();
 
@@ -94,8 +93,8 @@ window.addEventListener('scroll', () => {
     {
         rigthBottomCircleMove.style.right = `calc(100% - ${circleWidth + 1}px)`;
         leftTopCircleMove.style.left = `calc(100% - ${circleWidth}px)`;
-        rigthTopCircleMove.style.top = "0";
-        leftBottomCircleMove.style.bottom = "0";
+        rigthTopCircleMove.style.top = "3px";
+        leftBottomCircleMove.style.bottom = "3px";
 
     }
     

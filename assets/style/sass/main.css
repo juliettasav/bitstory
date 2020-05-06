@@ -409,7 +409,7 @@ nav.nav-top ul li:hover a::after {
 
 .intro__animation .circle-plain-right {
   right: 0;
-  top: 0;
+  top: 3px;
 }
 
 .intro__animation .circle-plain-right #Stroke {
@@ -428,7 +428,7 @@ nav.nav-top ul li:hover a::after {
 
 .intro__animation .circle-plain-left {
   left: 0;
-  top: 0;
+  top: 3px;
 }
 
 .intro__animation .circle-plain-left-bottom {
@@ -589,7 +589,7 @@ nav.nav-top ul li:hover a::after {
 }
 
 .we-create__animation .ubi-svg {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .we-create__animation .ubi-svg #Rigth-Block {
