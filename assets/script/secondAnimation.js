@@ -80,7 +80,7 @@ window.addEventListener('scroll', () => {
             ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1046.6`);
             tenTriangle.setAttribute("points", `351.1,697.7 351.1,697.7 351.1,1046.6`);
             elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
-            elvnTriangle.style.opacity = '0';
+            // elvnTriangle.style.opacity = '0';
             twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
@@ -101,7 +101,7 @@ window.addEventListener('scroll', () => {
             eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,348.9`);
             ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1046.6`);
             tenTriangle.setAttribute("points", `351.1,697.7 351.1,697.7 351.1,1046.6`);
-            elvnTriangle.style.opacity = '0';
+            // elvnTriangle.style.opacity = '0';
             elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
             twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
@@ -125,7 +125,7 @@ window.addEventListener('scroll', () => {
             ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1046.6`);
             tenTriangle.setAttribute("points", `351.1,697.7 351.1,697.7 351.1,1046.6`);
             elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
-            elvnTriangle.style.opacity = '0';
+            // elvnTriangle.style.opacity = '0';
             twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
@@ -149,7 +149,7 @@ window.addEventListener('scroll', () => {
             ninthTriangle.style.opacity = "1";
             tenTriangle.style.opacity = "1";
             elvnTriangle.setAttribute("points", `1048.9,348.9 1223.3,523.2 1397.7,697.7`);
-            elvnTriangle.style.opacity = '0';
+            // elvnTriangle.style.opacity = '0';
             twlvriangle.setAttribute("points", `351.1,1046.6 174,869.5 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,348.9`);
@@ -170,7 +170,7 @@ window.addEventListener('scroll', () => {
             eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,0`);
             ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,1395.4`);
             tenTriangle.setAttribute("points", `2.3,697.7 351.1,697.7 351.1,1046.6`);
-            elvnTriangle.style.opacity = '0.5';
+            // elvnTriangle.style.opacity = '0.5';
             elvnTriangle.setAttribute("points", `1048.9,348.9 ${1223.3 + (secondValue * 3)},${523.2 - (secondValue * 3)} 1397.7,697.7`);
             twlvriangle.setAttribute("points", `351.1,1046.6 ${174 - (secondValue * 3)},${869.5 + (secondValue * 3)} 2.3,697.7`);
             elvnTriangle.style.opacity = "1";
