@@ -670,6 +670,12 @@ mask rect {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .innovate .container {
+    padding: 192px 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .innovate .container {
     padding: 192px 0;

@@ -9,17 +9,26 @@ window.addEventListener("scroll", () => {
     const allCircles = document.querySelectorAll(".innovate__circles");
     const allMask = document.querySelectorAll(".fill-white");
 
-    const value = window.pageYOffset - 2550;
-    const circlPostion = 20 - value;  
+    const size = document.documentElement.clientHeight;
+
+    let value;
+    if (window.pageYOffset < 748) 
+    {
+        value = window.pageYOffset - size * 4 + 250;
+    }
+    else
+    {
+        value = window.pageYOffset - size * 4 + 350;
+       
+    }
+    
+    const circlPostion = 50 - value;  
 
     allBlocks.forEach(el => {
         el.style.transition = "opacity ease-in-out .2s";
     })
-    
-
-    console.log(circlPostion);
-    
-    if(circlPostion > 0 && circlPostion <= 355)
+        
+    if(circlPostion > 5 && circlPostion <= 355)
 
     {
         sixCircle.style.transform = `translateX(-${circlPostion}px)`;
@@ -52,7 +61,7 @@ window.addEventListener("scroll", () => {
         });
         
     }
-    else if (circlPostion < 0)
+    else if (circlPostion <= 0)
     {
         allBlocks.forEach(element => {
             element.style.opacity = "0";
@@ -80,7 +89,9 @@ window.addEventListener("scroll", () => {
         })
 
     }
-
+    
     
     
 })
+
+
