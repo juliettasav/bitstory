@@ -22,7 +22,7 @@ window.addEventListener("scroll", () => {
        
     }
     
-    const circlPostion = 50 - value;  
+    const circlPostion = (50 - value) * 2;  
 
     allBlocks.forEach(el => {
         el.style.transition = "opacity ease-in-out .2s";
