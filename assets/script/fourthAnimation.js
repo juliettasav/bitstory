@@ -42,7 +42,7 @@ window.addEventListener("scroll", () => {
 
         allBlocks.forEach(element => {
             element.style.opacity = "1";
-            element.style.animation =`lineDashSecond 2s .${id}s linear forwards`;
+            element.style.animation =`lineDashSecond 2.5s .${id}s linear infinite`;
             id++;
         })
 
