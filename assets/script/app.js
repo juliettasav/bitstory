@@ -84,15 +84,21 @@ document.querySelector(".mob-menu").addEventListener('click', (e) => {
 })
 
 
-const pFirst = document.querySelector("#p1");
-const pSecond = document.querySelector("#p2");
+const tFirst = document.querySelector("#p1");
+const tSecond = document.querySelector("#p2");
+const tThird = document.querySelector("#p3");
 setTimeout(() => {
-    pFirst.style.transform = "translateY(0px)";
-    pFirst.style.opacity = "1"
+    tFirst.style.transform = "translateY(0px)";
+    tFirst.style.opacity = "1"
     
-}, 200)
+}, 100)
 setTimeout(() => {
-    pSecond.style.transform = "translateY(0px)";
-    pSecond.style.opacity = "1"
-}, 400)
+    tSecond.style.transform = "translateY(0px)";
+    tSecond.style.opacity = "1"
+}, 500)
+setTimeout(() => {
+    tThird.style.transform = "translate(10px, 0)";
+    tThird.style.opacity = "1"
+}, 900)
+
 
