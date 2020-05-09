@@ -229,9 +229,73 @@ nav.nav-top
     display: none
     opacity: 0
     z-index: 10
+    background-color: rgba(0, 0, 0, 0.69)
+    width: 100%
+    height: 100vh
+    position: fixed
+    transition: opacity ease-in-out .2s
     &__box
+        width: 350px
+        height: 170px
+        background-color: #efefef
+        border-radius: 10px
+        margin: 0 auto
+        transform: translateY(calc(50% + 150px))
     &__header
+        max-width: 80%
+        margin: 0 auto
+        text-align: center
+        padding-top: 40px
+        font-size: 29px
+        border-bottom: 1px solid black
+        border-color: rgba(0, 0, 0, 0.45)
+        p 
+            font-family: 'Lato', sans-serif
+        .close
+            position: absolute
+            width: 30px
+            height: 30px
+            right: 15px
+            top: 10px
+            border-radius: 50%
+            transition: all ease-in-out .2s
+            span 
+                position: relative
+            span:after
+                position: absolute
+                top: 13px
+                right: -10px
+                display: block
+                content: ''
+                width: 20px
+                height: 3px
+                background-color: black
+                transform: rotate(45deg)
+            span:before
+                position: absolute
+                top: 13px
+                right: -10px
+                display: block
+                content: ''
+                width: 20px
+                height: 3px
+                background-color: black
+                transform: rotate(-45deg)
+        .close:hover
+            background-color: rgba(0, 0, 0, 0.15)
     &__body
+        max-width: 80%
+        margin: 0 auto
+        p
+            padding-top: 40px
+            text-align: center
+            font-size: 21px
+            font-family: 'Lato', sans-serif
+            a 
+                color: black
+                cursor: pointer
+                font-family: 'Lato', sans-serif
+
 // INTRO SECTION
 .intro
     height: 100vh
@@ -244,10 +308,7 @@ nav.nav-top
         padding: 5% 0
         @media screen and (max-width: 1440px)
             padding: 206px 0 192px
-        // @media screen and (max-width: 1024px)
-        //     padding: 950px
-        // @media screen and (max-width: 768px)
-        //     padding: 700px
+
         @media screen and (max-width: 425px)
             padding: 150px 0
     &__animation
@@ -256,7 +317,7 @@ nav.nav-top
         @media screen and (max-width: 1440px)
             width: 500px
         @media screen and (max-width: 1024px)
-            width: 310px
+            width: 300px
         // @media screen and (max-width: 768px)
         //     padding: 700px
         @media screen and (max-width: 425px)
@@ -529,7 +590,6 @@ mask
         left: 0
     100%
         left: calc(75% - 250px)
-
 
 @keyframes left-right-bottom-1024
     0%

@@ -214,9 +214,20 @@ window.addEventListener("scroll", () => {
         }, 500)
     }
 })
+const modal = document.querySelector(".modal");
 
 document.querySelector("#contact-us").addEventListener("click", (e) => {
-    console.log(e.target);
+    // console.log(e.target);
+    modal.style.display = "block";
+    setTimeout(() => {
+        modal.style.opacity = "1";
+    }, 200);
     
-    
+})
+
+document.querySelector(".close").addEventListener("click", (e) => {
+    modal.style.opacity = "0";
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 200);
 })
