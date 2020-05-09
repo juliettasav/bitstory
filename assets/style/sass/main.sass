@@ -48,7 +48,7 @@ header
         padding: 20px 0 40px
     .container
         display: flex
-        align-items: flex-start
+        align-items: center
         justify-content: space-between
         @media screen and (max-width: 425px)
             align-items: center
@@ -96,6 +96,7 @@ nav.nav-top
         @media screen and (max-width: 425px)
             display: block
     ul
+        display: flex
         text-align: right
         @media screen and (max-width: 425px)
             display: block
@@ -135,32 +136,38 @@ nav.nav-top
                 @media screen and (max-width: 425px)
                     color: black
         li:nth-child(2)
-            margin: 32px 0
+            margin: 0 30px
         li:hover a::after
             width: 90px
         
 .title
     position: fixed
     width: 100%
-    bottom: 10%
+    // bottom: calc(50% - 46px)
     z-index: 3
     @media screen and (max-width: 425px)
-        bottom: 0
+        bottom: 0 !important
     &__footer
         display: flex
         align-items: center
         justify-content: space-between
+        flex-direction: column
         @media screen and (max-width: 425px)
-            padding-bottom: 73px
+            padding-bottom: 50px
             justify-content: center
         &__title
+            margin-left: auto
+            @media screen and (max-width: 425px)
+                margin-left: 0px
+                padding-bottom: 43px
             p
                 font-size: 37px
                 color: #efefef
                 font-family: 'Lato', sans-serif
                 font-weight: 600
                 padding: 5px 0
-                letter-spacing: 6px
+                letter-spacing: 3.8px
+                line-height: 1.46
                 opacity: 0
                 transition: opacity cubic-bezier(0.32, 0, 0.67, 0) .7s, transform cubic-bezier(0.65, 0, 0.35, 1) .5s .15s
                 @media screen and (max-width: 425px)
@@ -169,22 +176,54 @@ nav.nav-top
                     text-align: center
                     line-height: 1.52
                     letter-spacing: 2.1px
+            p#p1
+                text-align: right
+                transform: translate(-10px, 20px)
+                @media screen and (max-width: 768px)
+                    display: block !important
+                @media screen and (max-width: 425px)
+                    text-align: center
+                    transform: translate(0px, 20px)
             p#p1, p#p2
                 transform: translateY(20px)
-            p#p2, p#p3
+            p#p1, p#p2, p#p3
                 display: inline-block
             p#p3
                 transform: translate(10px, 20px)
+        &__subtitle
+            margin-left: auto
+            @media screen and (max-width: 425px)
+                margin-left: 0
+            p
+                font-size: 21px
+                color: #ffffff
+                font-family: 'Lato', sans-serif
+                font-weight: 300
+                padding: 5px 0
+                letter-spacing: normal
+                line-height: 2
+                text-align: right
+                transition: opacity cubic-bezier(0.32, 0, 0.67, 0) .7s, transform cubic-bezier(0.65, 0, 0.35, 1) .5s .15s
+                opacity: 0
+                transform: translateY(20px)
+                @media screen and (max-width: 768px)
+                    width: 209px
+                    font-size: 16px
+                    line-height: 1.88
+                @media screen and (max-width: 425px)
+                    text-align: center
 
-        &__arrow
-            @media screen and (max-width: 768px)
-                display: none
-            img
-                width: 32px
-                opacity: .5
-                transition: all ease-in-out .2s
-            img:hover
-                opacity: 1s
+
+
+        // &__arrow
+        //     @media screen and (max-width: 768px)
+        //         display: none
+        //     img
+        //         width: 32px
+        //         opacity: .5
+        //         transition: all ease-in-out .2s
+        //     img:hover
+        //         opacity: 1s
 
 // INTRO SECTION
 .intro
@@ -195,7 +234,7 @@ nav.nav-top
     transition: all ease-in-out .4s
     z-index: 1
     .container
-        padding: 10% 0
+        padding: 5% 0
         @media screen and (max-width: 1440px)
             padding: 206px 0 192px
         // @media screen and (max-width: 1024px)
@@ -207,15 +246,14 @@ nav.nav-top
     &__animation
         width: 704px
         @media screen and (max-width: 1440px)
+            width: 500px
+        @media screen and (max-width: 1024px)
             width: 310px
-        // @media screen and (max-width: 1024px)
-        //     padding: 310px
         // @media screen and (max-width: 768px)
         //     padding: 700px
         @media screen and (max-width: 425px)
             width: 300px
         position: relative
-        margin: 0 auto
         @media screen and (max-width: 1024px)
             margin: none
             margin-left: 64px
@@ -240,13 +278,13 @@ nav.nav-top
                     stroke-dasharray: 3000
                     stroke-dashoffset: 0
                     animation: lineDash 2s cubic-bezier(0.87, 0, 0.13, 1) forwards
-                    // transform-origin: center
-                    // transform: rotate(180deg)
-                    // transform-box: fill-box
+
         .circle-plain
             width: 350px
             @media screen and (max-width: 1440px)
-                width: 155px
+                width: 250px
+            @media screen and (max-width: 1024px)
+                width: 150px
             position: absolute
         .circle-plain-right
             right: 0
@@ -286,7 +324,7 @@ nav.nav-top
     z-index: 0
     transition: opacity ease-in-out .2s
     .container
-        padding: 10% 0
+        padding: 5% 0
         @media screen and (max-width: 1440px)
             padding: 126px 0 192px
         @media screen and (max-width: 768px)
@@ -294,7 +332,6 @@ nav.nav-top
         @media screen and (max-width: 425px)
             padding: 150px 0
     &__animation
-        margin: 0 auto
         width: 704px
         @media screen and (max-width: 1440px)
             width: 510px
@@ -329,7 +366,6 @@ nav.nav-top
         @media screen and (max-width: 425px)
             padding: 150px 0
     &__animation
-        margin: 0 auto
         width: 704px
         @media screen and (max-width: 1440px)
             width: 510px
@@ -403,7 +439,6 @@ mask
         @media screen and (max-width: 425px)
             padding: 150px 0
     &__animation
-        margin: 0 auto
         width: 704px
         @media screen and (max-width: 1440px)
             width: 510px
@@ -444,12 +479,18 @@ mask
     100%
         left: calc(100% - 350px)
 
-
 @keyframes left-right-top-1440
     0%
         left: 0
     100%
-        left: calc(100% - 155px)
+        left: calc(100% - 250px)
+
+
+@keyframes left-right-top-1024
+    0%
+        left: 0
+    100%
+        left: calc(100% - 150px)
 
 @keyframes right-left-top-1920
     0%
@@ -461,7 +502,14 @@ mask
     0%
         right: 0
     100%
-        right: calc(75% - 155px)
+        right: calc(75% - 250px)
+
+
+@keyframes right-left-top-1024
+    0%
+        right: 0
+    100%
+        right: calc(75% - 150px)
 
 @keyframes left-right-bottom-1920
     0%
@@ -473,7 +521,14 @@ mask
     0%
         left: 0
     100%
-        left: calc(75% - 155px)
+        left: calc(75% - 250px)
+
+
+@keyframes left-right-bottom-1024
+    0%
+        left: 0
+    100%
+        left: calc(75% - 150px)
 
 @keyframes right-left-bottom-1920
     0%
@@ -485,7 +540,14 @@ mask
     0%
         right: 0
     100%
-        right: calc(100% - 155px)
+        right: calc(100% - 250px)
+
+
+@keyframes right-left-bottom-1024
+    0%
+        right: 0
+    100%
+        right: calc(100% - 150px)
 
 @keyframes  whiteFill
     0%

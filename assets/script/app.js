@@ -87,9 +87,19 @@ document.querySelector(".mob-menu").addEventListener('click', (e) => {
 const tFirst = document.querySelector("#p1");
 const tSecond = document.querySelector("#p2");
 const tThird = document.querySelector("#p3");
+const tFourth = document.querySelector("#p4");
 setTimeout(() => {
-    tFirst.style.transform = "translateY(0px)";
-    tFirst.style.opacity = "1"
+    if (window.innerWidth <= 425)
+    {
+        tFirst.style.transform = "translate(0px, 0px)";
+        tFirst.style.opacity = "1"
+    } 
+    else 
+    {
+        tFirst.style.transform = "translate(-10px, 0px)";
+        tFirst.style.opacity = "1"
+    }
+    
     
 }, 100)
 setTimeout(() => {
@@ -100,5 +110,14 @@ setTimeout(() => {
     tThird.style.transform = "translate(10px, 0)";
     tThird.style.opacity = "1"
 }, 900)
+setTimeout(() => {
+    tFourth.style.transform = "translateY(0px)";
+    tFourth.style.opacity = "1"
+}, 1300)
+
+
+const titleText = document.querySelector(".title");
+titleText.style.bottom = `calc(50% - ${titleText.offsetHeight / 2}px`;
+
 
 
