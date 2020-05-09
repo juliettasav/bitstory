@@ -38,19 +38,16 @@ window.onload = (e) => {
     }, 700)
     
     setTimeout(() => {
-        alert(window.innerWidth);
         leftTopCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         rightTopHalfCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         if (window.innerWidth >= 1680)
         {
             leftTopCircleMove.style.animation = "left-right-top-1920 2s cubic-bezier(0.76, 0, 0.24, 1)";
             rigthTopCircleMove.style.animation = "right-left-top-1920 2s ease";
-            alert('window.innerWidth >= 1920');
         } else if (window.innerWidth >= 1440 && window.innerWidth < 1680)
         {
             leftTopCircleMove.style.animation = "left-right-top-1440 2s cubic-bezier(0.76, 0, 0.24, 1)";
             rigthTopCircleMove.style.animation = "right-left-top-1440 2s ease";
-            alert('window.innerWidth < 1920');
             
         }
         else 
