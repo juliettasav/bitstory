@@ -332,7 +332,7 @@ nav.nav-top ul li:hover a::after {
 }
 
 .intro .container {
-  padding: 100px 0;
+  padding: 10% 0;
 }
 
 @media screen and (max-width: 1440px) {
