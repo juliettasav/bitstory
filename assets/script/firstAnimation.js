@@ -49,6 +49,8 @@ window.onload = (e) => {
         {
             leftTopCircleMove.style.animation = "left-right-top-1440 2s cubic-bezier(0.76, 0, 0.24, 1)";
             rigthTopCircleMove.style.animation = "right-left-top-1440 2s ease";
+            console.log('window.innerWidth < 1920');
+            
         }
         else 
         {
