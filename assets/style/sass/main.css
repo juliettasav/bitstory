@@ -735,7 +735,7 @@ nav.nav-top ul li:hover a::after {
 }
 
 .we-create .container {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 @media screen and (max-width: 1440px) {
