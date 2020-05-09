@@ -24,6 +24,7 @@ window.addEventListener('scroll', () => {
     const rightSide = document.querySelector("g#right-side");
     const leftSide = document.querySelector("g#left-side");
 
+
     thirdTriangle.style.transform = "translateY(-0.5px)"
     fourthTriangle.style.transform = "translateY(1px)"
     fifthTriangle.style.transform = "translateY(1px)"
@@ -39,6 +40,8 @@ window.addEventListener('scroll', () => {
 
     rightSide.style.transform = `translate(0px, 0px)`;
     leftSide.style.transform = `translate(0px, 0px)`;
+
+
 
 
     let value = scrollValue - size;
@@ -92,7 +95,8 @@ window.addEventListener('scroll', () => {
             secondTriangle.setAttribute("points", `1048.9,697.7 700,697.7 700,348.9`);
             thirdTriangle.setAttribute("points", `700,697.7 1048.9,697.7 1048.9,${697.7 + (secondValue * 3) }`);
             fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,${697.7 - (secondValue * 3)}`);
-            
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
             thirdTriangle.style.opacity = "1";
             fourthTriangle.style.opacity = "1";
             fifthTriangle.setAttribute("points", `700,348.9 872.45,521.3 1048.9,697.7`);
@@ -118,6 +122,10 @@ window.addEventListener('scroll', () => {
             fourthTriangle.setAttribute("points", `700,697.7 351.1,697.7 351.1,348.9`);
             fifthTriangle.setAttribute("points", `700,348.9 ${872.45 + (secondValue * 3)},${521.3 - (secondValue * 3)} 1048.9,697.7`);
             sixthTriangle.setAttribute("points", `700,1046.6 ${525.45 - (secondValue * 3)},${872.1 + (secondValue * 3)} 351.1,697.7`);
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
+            thirdTriangle.style.opacity = "1";
+            fourthTriangle.style.opacity = "1";
             fifthTriangle.style.opacity = "1";
             sixthTriangle.style.opacity = "1";
             sevenTriangle.setAttribute("points", `1048.9,697.7 1048.9,697.7 1048.9,348.9`);
@@ -144,6 +152,12 @@ window.addEventListener('scroll', () => {
             eightTriangle.setAttribute("points", `1048.9,348.9 700,348.9 700,${348.9 - (secondValue * 3)}`);
             ninthTriangle.setAttribute("points", `351.1,1046.6 700,1046.6 700,${1046.6 + (secondValue * 3)}`);
             tenTriangle.setAttribute("points", `${351.1 - (secondValue * 3)},697.7 351.1,697.7 351.1,1046.6`);
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
+            thirdTriangle.style.opacity = "1";
+            fourthTriangle.style.opacity = "1";
+            fifthTriangle.style.opacity = "1";
+            sixthTriangle.style.opacity = "1";
             sevenTriangle.style.opacity = "1";
             eightTriangle.style.opacity = "1";
             ninthTriangle.style.opacity = "1";
@@ -173,6 +187,16 @@ window.addEventListener('scroll', () => {
             // elvnTriangle.style.opacity = '0.5';
             elvnTriangle.setAttribute("points", `1048.9,348.9 ${1223.3 + (secondValue * 3)},${523.2 - (secondValue * 3)} 1397.7,697.7`);
             twlvriangle.setAttribute("points", `351.1,1046.6 ${174 - (secondValue * 3)},${869.5 + (secondValue * 3)} 2.3,697.7`);
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
+            thirdTriangle.style.opacity = "1";
+            fourthTriangle.style.opacity = "1";
+            fifthTriangle.style.opacity = "1";
+            sixthTriangle.style.opacity = "1";
+            sevenTriangle.style.opacity = "1";
+            eightTriangle.style.opacity = "1";
+            ninthTriangle.style.opacity = "1";
+            tenTriangle.style.opacity = "1";
             elvnTriangle.style.opacity = "1";
             twlvriangle.style.opacity = "1";
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1046.6`);
@@ -195,6 +219,18 @@ window.addEventListener('scroll', () => {
             twlvriangle.setAttribute("points", `351.1,1046.6 2.3,1046.6 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,${1046.6 + (secondValue * 3)}`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,${348.9 - (secondValue * 3)}`);
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
+            thirdTriangle.style.opacity = "1";
+            fourthTriangle.style.opacity = "1";
+            fifthTriangle.style.opacity = "1";
+            sixthTriangle.style.opacity = "1";
+            sevenTriangle.style.opacity = "1";
+            eightTriangle.style.opacity = "1";
+            ninthTriangle.style.opacity = "1";
+            tenTriangle.style.opacity = "1";
+            elvnTriangle.style.opacity = "1";
+            twlvriangle.style.opacity = "1";
             thrteenTriangle.style.opacity = "1";
             fourteenTriangle.style.opacity = "1";
         }
@@ -214,9 +250,37 @@ window.addEventListener('scroll', () => {
             twlvriangle.setAttribute("points", `351.1,1046.6 2.3,1046.6 2.3,697.7`);
             thrteenTriangle.setAttribute("points", `2.3,1046.6 351.1,1046.6 351.1,1395.4`);
             fourteenTriangle.setAttribute("points", `1397.7,348.9 1048.9,348.9 1048.9,0`);
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
+            thirdTriangle.style.opacity = "1";
+            fourthTriangle.style.opacity = "1";
+            fifthTriangle.style.opacity = "1";
+            sixthTriangle.style.opacity = "1";
+            sevenTriangle.style.opacity = "1";
+            eightTriangle.style.opacity = "1";
+            ninthTriangle.style.opacity = "1";
+            tenTriangle.style.opacity = "1";
+            elvnTriangle.style.opacity = "1";
+            twlvriangle.style.opacity = "1";
+            thrteenTriangle.style.opacity = "1";
+            fourteenTriangle.style.opacity = "1";
             
         } else if (value >= 600)
         {
+            firstTriangle.style.opacity = "1";
+            secondTriangle.style.opacity = "1";
+            thirdTriangle.style.opacity = "1";
+            fourthTriangle.style.opacity = "1";
+            fifthTriangle.style.opacity = "1";
+            sixthTriangle.style.opacity = "1";
+            sevenTriangle.style.opacity = "1";
+            eightTriangle.style.opacity = "1";
+            ninthTriangle.style.opacity = "1";
+            tenTriangle.style.opacity = "1";
+            elvnTriangle.style.opacity = "1";
+            twlvriangle.style.opacity = "1";
+            thrteenTriangle.style.opacity = "1";
+            fourteenTriangle.style.opacity = "1";
             rightSide.style.transform = `translate(${value - 600}px, -${value - 600}px)`;
             leftSide.style.transform = `translate(-${value - 600}px, ${value - 600}px)`;            
         }

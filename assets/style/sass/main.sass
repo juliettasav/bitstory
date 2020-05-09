@@ -41,7 +41,7 @@ header
     position: fixed
     width: 100%
     padding-top: 80px
-    z-index: 3
+    z-index: 4
     @media screen and (max-width: 1024px)
         padding-top: 40px
     @media screen and (max-width: 425px)
@@ -116,6 +116,7 @@ nav.nav-top
                 font-weight: 300
                 padding: 5px 0
                 opacity: .85
+                cursor: pointer
                 transition: all ease-in-out .2s
                 @media screen and (max-width: 425px)
                     color: black
@@ -147,16 +148,22 @@ nav.nav-top
     z-index: 3
     @media screen and (max-width: 425px)
         bottom: 0 !important
+    .container
+        height: 100vh
     &__footer
         display: flex
         align-items: center
+        position: absolute
+        right: 10%
         justify-content: space-between
         flex-direction: column
+        transition: opacity cubic-bezier(0.32, 0, 0.67, 0) .7s, transform cubic-bezier(0.65, 0, 0.35, 1) .5s .15s
         @media screen and (max-width: 425px)
             padding-bottom: 50px
             justify-content: center
         &__title
             margin-left: auto
+            text-align: right
             @media screen and (max-width: 425px)
                 margin-left: 0px
                 padding-bottom: 43px
@@ -213,18 +220,18 @@ nav.nav-top
                 @media screen and (max-width: 425px)
                     text-align: center
 
+.active
+    opacity: 1
+.unactive
 
-
-        // &__arrow
-        //     @media screen and (max-width: 768px)
-        //         display: none
-        //     img
-        //         width: 32px
-        //         opacity: .5
-        //         transition: all ease-in-out .2s
-        //     img:hover
-        //         opacity: 1s
-
+// Modal
+.modal
+    display: none
+    opacity: 0
+    z-index: 10
+    &__box
+    &__header
+    &__body
 // INTRO SECTION
 .intro
     height: 100vh
@@ -245,6 +252,7 @@ nav.nav-top
             padding: 150px 0
     &__animation
         width: 704px
+        margin-left: 64px
         @media screen and (max-width: 1440px)
             width: 500px
         @media screen and (max-width: 1024px)
@@ -256,7 +264,6 @@ nav.nav-top
         position: relative
         @media screen and (max-width: 1024px)
             margin: none
-            margin-left: 64px
         @media screen and (max-width: 768px)
             margin-left: 44.5px
         @media screen and (max-width: 425px)
@@ -333,12 +340,12 @@ nav.nav-top
             padding: 150px 0
     &__animation
         width: 704px
+        margin-left: 64px
         @media screen and (max-width: 1440px)
             width: 510px
         @media screen and (max-width: 1024px)
             width: 410px
             margin: none
-            margin-left: 64px
         @media screen and (max-width: 768px)
             width: 300px
             margin-left: 44.5px
@@ -367,12 +374,12 @@ nav.nav-top
             padding: 150px 0
     &__animation
         width: 704px
+        margin-left: 64px
         @media screen and (max-width: 1440px)
             width: 510px
         @media screen and (max-width: 1024px)
             width: 410px
             margin: none
-            margin-left: 64px
         @media screen and (max-width: 768px)
             width: 300px
             margin-left: 44.5px
@@ -440,12 +447,12 @@ mask
             padding: 150px 0
     &__animation
         width: 704px
+        margin-left: 64px
         @media screen and (max-width: 1440px)
             width: 510px
         @media screen and (max-width: 1024px)
             width: 410px
             margin: none
-            margin-left: 64px
         @media screen and (max-width: 768px)
             width: 300px
             margin-left: 44.5px
