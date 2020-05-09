@@ -38,7 +38,7 @@ window.onload = (e) => {
     }, 700)
     
     setTimeout(() => {
-        
+        alert(window.innerWidth);
         leftTopCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         rightTopHalfCircle.style.animation = "whiteFill 2s cubic-bezier(0.76, 0, 0.24, 1)";
         if (window.innerWidth >= 1920)
