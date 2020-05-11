@@ -83,147 +83,26 @@ document.querySelector(".mob-menu").addEventListener('click', (e) => {
     e.target.classList.toggle("mob-menu__active");
 })
 
-const titleFirst = document.querySelector("#title-first");
-const titleSecond = document.querySelector("#title-second");
-const titleThird = document.querySelector("#title-third");
-const titleFourth = document.querySelector("#title-fourth");
-const tFirst = document.querySelector("#p1");
-const tSecond = document.querySelector("#p2");
-const tThird = document.querySelector("#p3");
-const tFourth = document.querySelector("#p4");
-const tFifth = document.querySelector("#p5");
-const tSixth = document.querySelector("#p6");
-const tSeventh = document.querySelector("#p7");
-const tEight = document.querySelector("#p8");
-const tNinth = document.querySelector("#p9");
-setTimeout(() => {
-    if (window.innerWidth <= 425)
-    {
-        tFirst.style.transform = "translate(0px, 0px)";
-        tFirst.style.opacity = "1"
-    } 
-    else 
-    {
-        tFirst.style.transform = "translate(-10px, 0px)";
-        tFirst.style.opacity = "1"
-    }
-    
-}, 100)
-setTimeout(() => {
-    tSecond.style.transform = "translateY(0px)";
-    tSecond.style.opacity = "1"
-}, 500)
-setTimeout(() => {
-    tThird.style.transform = "translate(10px, 0)";
-    tThird.style.opacity = "1"
-}, 900)
-
-
-console.log(window.innerHeight);
-
-
-const titleText = document.querySelector(".title");
-titleFirst.style.bottom = `calc(50% - ${titleFirst.offsetHeight / 2}px`;  
-
-window.addEventListener("scroll", () => {
-    console.log(window.pageYOffset);
-    if (window.pageYOffset < window.innerHeight - 50)
-    {
-        titleFirst.style.opacity = "1";
-        titleSecond.style.opacity = "0";
-        titleThird.style.opacity = "0";
-        titleFourth.style.opacity = "0";
-    }
-    else if (window.pageYOffset >= (window.innerHeight - 50) && window.pageYOffset <= (window.innerHeight + 150))
-    {
-        titleFirst.style.opacity = "0";
-        titleSecond.style.opacity = "0";
-        titleThird.style.opacity = "0";
-        titleFourth.style.opacity = "0";
-        titleFirst.style.transform = "translateY(-20px)";
-    }
-    else if (window.pageYOffset >= (window.innerHeight + (window.innerHeight / 4)) &&  window.pageYOffset < (window.innerHeight + (window.innerHeight / 3.5)))
-    {
-        titleFirst.style.opacity = "0";
-        titleThird.style.opacity = "0";
-        titleFourth.style.opacity = "0";
-        titleSecond.style.opacity = "1";
-        titleSecond.style.bottom = `calc(50% - ${titleSecond.offsetHeight / 2}px`;
-        setTimeout(() => {
-                tFifth.style.transform = "translate(-10px, 0px)";
-                tFifth.style.opacity = "1"
-            
-        }, 200)
-        setTimeout(() => {
-            tFourth.style.transform = "translateY(0px)";
-            tFourth.style.opacity = "1"
-        }, 500)
-
-    } else if (window.pageYOffset >= ((window.innerHeight * 2) - 50) &&  window.pageYOffset <= ((window.innerHeight * 2) + 150))
-    {
-        titleSecond.style.opacity = "0";
-        titleFirst.style.opacity = "0";
-        titleThird.style.opacity = "0";
-        titleFourth.style.opacity = "0";
-        titleSecond.style.transform = "translateY(-20px)";
-    }
-    else if (window.pageYOffset >= (window.innerHeight * 2 + (window.innerHeight / 4)) &&  window.pageYOffset < (window.innerHeight * 2 + (window.innerHeight / 3.5)))
-    {
-        titleFirst.style.opacity = "0";
-        titleSecond.style.opacity = "0";
-        titleThird.style.opacity = "1";
-        titleFourth.style.opacity = "0";
-        titleThird.style.bottom = `calc(50% - ${titleThird.offsetHeight / 2}px`;
-
-        setTimeout(() => {
-            
-            tSixth.style.transform = "translate(-10px, 0px)";
-            tSixth.style.opacity = "1"
-            
-        }, 200)
-        setTimeout(() => {
-            tSeventh.style.transform = "translateY(0px)";
-            tSeventh.style.opacity = "1"
-        }, 500)
-        
-    } 
-    else if (window.pageYOffset >= ((window.innerHeight * 3) - 50) &&  window.pageYOffset <= ((window.innerHeight * 3) + 150))
-    {
-        titleFirst.style.opacity = "0";
-        titleSecond.style.opacity = "0";
-        titleThird.style.opacity = "0";
-        titleThird.style.transform = "translateY(-20px)";
-        titleFourth.style.opacity = "0";
-    }
-    else if (window.pageYOffset >= (window.innerHeight * 3 + (window.innerHeight / 4)) &&  window.pageYOffset < (window.innerHeight * 3 + (window.innerHeight / 3.5)))
-    {
-        titleFourth.style.opacity = "1";
-        titleFirst.style.opacity = "0";
-        titleSecond.style.opacity = "0";
-        titleThird.style.opacity = "0";
-        titleFourth.style.bottom = `calc(50% - ${titleFourth.offsetHeight / 2}px`;
-        setTimeout(() => {
-            
-            tEight.style.transform = "translate(-10px, 0px)";
-            tEight.style.opacity = "1"
-            
-        }, 200)
-        setTimeout(() => {
-            tNinth.style.transform = "translateY(0px)";
-            tNinth.style.opacity = "1"
-        }, 500)
-    }
-})
+// Showing the modal
 const modal = document.querySelector(".modal");
 
-document.querySelector("#contact-us").addEventListener("click", (e) => {
-    // console.log(e.target);
-    modal.style.display = "block";
-    setTimeout(() => {
-        modal.style.opacity = "1";
-    }, 200);
+document.querySelectorAll("#contact-us").forEach(element => {
+    element.addEventListener("click", (e) => {
+        modal.style.display = "block";
+        setTimeout(() => {
+            modal.style.opacity = "1";
+        }, 200);
+    })
     
 })
+
+// document.querySelector("#contact-us").addEventListener("click", (e) => {
+//     modal.style.display = "block";
+//     setTimeout(() => {
+//         modal.style.opacity = "1";
+//     }, 200);
+    
+// })
 
 document.querySelector(".close").addEventListener("click", (e) => {
     modal.style.opacity = "0";

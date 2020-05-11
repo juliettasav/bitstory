@@ -150,23 +150,24 @@ nav.nav-top
         bottom: 0 !important
     .container
         height: 100vh
+        position: relative
     &__footer
         display: flex
         align-items: center
         position: absolute
-        right: 10%
+        right: 0
         justify-content: space-between
         flex-direction: column
         transition: opacity cubic-bezier(0.32, 0, 0.67, 0) .7s, transform cubic-bezier(0.65, 0, 0.35, 1) .5s .15s
         @media screen and (max-width: 425px)
-            padding-bottom: 50px
+            // padding-bottom: 50px
             justify-content: center
         &__title
             margin-left: auto
             text-align: right
             @media screen and (max-width: 425px)
                 margin-left: 0px
-                padding-bottom: 43px
+                // paddin  g-bottom: 43px
             p
                 font-size: 37px
                 color: #efefef
@@ -246,9 +247,9 @@ nav.nav-top
         margin: 0 auto
         text-align: center
         padding-top: 40px
+        padding-bottom: 20px
         font-size: 29px
-        border-bottom: 1px solid black
-        border-color: rgba(0, 0, 0, 0.45)
+
         p 
             font-family: 'Lato', sans-serif
         .close
@@ -287,7 +288,7 @@ nav.nav-top
         max-width: 80%
         margin: 0 auto
         p
-            padding-top: 40px
+            padding-top: 20px
             text-align: center
             font-size: 21px
             font-family: 'Lato', sans-serif
@@ -432,7 +433,7 @@ nav.nav-top
         @media screen and (max-width: 1024px)
             padding: 132px 0
         @media screen and (max-width: 425px)
-            padding: 150px 0
+            padding: 0
     &__animation
         width: 704px
         margin-left: 64px

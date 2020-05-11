@@ -250,6 +250,7 @@ nav.nav-top ul li:hover a::after {
 
 .title .container {
   height: 100vh;
+  position: relative;
 }
 
 .title__footer {
@@ -260,7 +261,7 @@ nav.nav-top ul li:hover a::after {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  right: 10%;
+  right: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -276,7 +277,6 @@ nav.nav-top ul li:hover a::after {
 
 @media screen and (max-width: 425px) {
   .title__footer {
-    padding-bottom: 50px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -291,7 +291,6 @@ nav.nav-top ul li:hover a::after {
 @media screen and (max-width: 425px) {
   .title__footer__title {
     margin-left: 0px;
-    padding-bottom: 43px;
   }
 }
 
@@ -427,9 +426,8 @@ nav.nav-top ul li:hover a::after {
   margin: 0 auto;
   text-align: center;
   padding-top: 40px;
+  padding-bottom: 20px;
   font-size: 29px;
-  border-bottom: 1px solid black;
-  border-color: rgba(0, 0, 0, 0.45);
 }
 
 .modal__header p {
@@ -487,7 +485,7 @@ nav.nav-top ul li:hover a::after {
 }
 
 .modal__body p {
-  padding-top: 40px;
+  padding-top: 20px;
   text-align: center;
   font-size: 21px;
   font-family: 'Lato', sans-serif;
@@ -752,7 +750,7 @@ nav.nav-top ul li:hover a::after {
 
 @media screen and (max-width: 425px) {
   .we-create .container {
-    padding: 150px 0;
+    padding: 0;
   }
 }
 
