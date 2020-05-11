@@ -232,6 +232,12 @@ nav.nav-top ul li:nth-child(2) {
   margin: 0 30px;
 }
 
+@media screen and (max-width: 425px) {
+  nav.nav-top ul li:nth-child(2) {
+    margin: 30px 0;
+  }
+}
+
 nav.nav-top ul li:hover a::after {
   width: 90px;
 }
