@@ -92,10 +92,10 @@ window.addEventListener('scroll', () => {
 
     if(scrollValue > 0) 
     {
-        leftTopCircleMove.style.left = `calc(100% - ${circleWidth}px + ${scrollValue / 4}px)`;
-        rigthTopCircleMove.style.top = `-${scrollValue / 4}px`;
-        leftBottomCircleMove.style.bottom = `-${scrollValue / 4}px`;
-        rigthBottomCircleMove.style.right = `calc(100% - ${circleWidth + 1}px + ${scrollValue / 4}px)`;
+        leftTopCircleMove.style.left = `calc(100% - ${circleWidth}px + ${scrollValue / 8}px)`;
+        rigthTopCircleMove.style.top = `-${scrollValue / 8}px`;
+        leftBottomCircleMove.style.bottom = `-${scrollValue / 8}px`;
+        rigthBottomCircleMove.style.right = `calc(100% - ${circleWidth + 1}px + ${scrollValue / 8}px)`;
     } 
     else
     {

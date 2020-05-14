@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
     const rigthBlock = document.querySelector("#Rigth-Block");
     const allLines = document.querySelectorAll(".st0");
     const size = document.documentElement.clientHeight;
-    const thirdAnimationSrart = size * 2 + 200;
+    const thirdAnimationSrart = size * 6;
 
     
     
@@ -115,9 +115,9 @@ window.addEventListener('scroll', () => {
             rigthBlock.style.transform = `translateY(0px)`;
         }
         
-        if (value >= 3500)
+        if (value >= 4000)
         {
-            animationSVG.style.transform = `translateY(-${(value - 3500) / 2}px)`;
+            animationSVG.style.transform = `translateY(-${(value - 4000) / 6}px)`;
         }
 
     }

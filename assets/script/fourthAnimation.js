@@ -10,19 +10,19 @@ window.addEventListener("scroll", () => {
     const allMask = document.querySelectorAll(".fill-white");
 
     const size = document.documentElement.clientHeight;
-
+    
     let value;
     if (window.pageYOffset < 748) 
     {
-        value = window.pageYOffset - size * 4 + 250;
+        value = window.pageYOffset - size * 9 + 450;
     }
     else
     {
-        value = window.pageYOffset - size * 4 + 350;
+        value = window.pageYOffset - size * 9 + 550;
        
     }
     
-    const circlPostion = (50 - value) * 2;  
+    const circlPostion = (50 - value) ;  
 
     allBlocks.forEach(el => {
         el.style.transition = "opacity ease-in-out .2s";

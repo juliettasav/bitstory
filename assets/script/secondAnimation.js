@@ -1,6 +1,6 @@
 window.addEventListener('scroll', () => {
     let scrollValue = window.pageYOffset;
-    const size = document.documentElement.clientHeight;
+    const size = document.documentElement.clientHeight * 3;
     const firstTriangle  = document.querySelector("g#_x31_ > polygon");
     const secondTriangle  = document.querySelector("g#_x32_ > polygon");
     const thirdTriangle  = document.querySelector("g#_x33_ > polygon");
@@ -45,6 +45,7 @@ window.addEventListener('scroll', () => {
 
 
     let value = scrollValue - size;
+    
     if(scrollValue >= size)
     {
         if(value < 117) {
@@ -265,7 +266,7 @@ window.addEventListener('scroll', () => {
             thrteenTriangle.style.opacity = "1";
             fourteenTriangle.style.opacity = "1";
             
-        } else if (value >= 600)
+        } else if (value >= 1000)
         {
             firstTriangle.style.opacity = "1";
             secondTriangle.style.opacity = "1";
@@ -281,8 +282,8 @@ window.addEventListener('scroll', () => {
             twlvriangle.style.opacity = "1";
             thrteenTriangle.style.opacity = "1";
             fourteenTriangle.style.opacity = "1";
-            rightSide.style.transform = `translate(${value - 600}px, -${value - 600}px)`;
-            leftSide.style.transform = `translate(-${value - 600}px, ${value - 600}px)`;            
+            rightSide.style.transform = `translate(${value - 1000}px, -${value - 1000}px)`;
+            leftSide.style.transform = `translate(-${value - 1000}px, ${value - 1000}px)`;            
         }
 
             

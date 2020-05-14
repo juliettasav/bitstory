@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
     let scrollValue = window.pageYOffset;
     
     //Making some conditions on showing with opacity style
-    if(scrollValue >= 0 && scrollValue <= size)
+    if(scrollValue >= 0 && scrollValue <= size * 3)
     {
         firstSection.style.opacity = "1";
         firstSection.style.zIndex = "1";
@@ -26,7 +26,7 @@ window.addEventListener('scroll', () => {
         fourthSection.style.zIndex = "0";
         
     }
-    if(scrollValue >= size && scrollValue <= secondSectionValue)
+    if(scrollValue >= size * 3 && scrollValue <= size * 6)
     {
         firstSection.style.opacity = "0";
         firstSection.style.zIndex = "0";
@@ -38,7 +38,7 @@ window.addEventListener('scroll', () => {
         fourthSection.style.zIndex = "0";
   
     }
-    if (scrollValue > secondSectionValue && scrollValue <= thirdSectionValue)
+    if (scrollValue > size * 6 && scrollValue <= size * 9)
     {
         firstSection.style.opacity = "0";
         firstSection.style.zIndex = "0";
@@ -50,8 +50,10 @@ window.addEventListener('scroll', () => {
         fourthSection.style.zIndex = "0";
 
     }
-    if (scrollValue > thirdSectionValue)
+    if (scrollValue > size * 8)
     {
+        console.log('last animation');
+        
         firstSection.style.opacity = "0";
         firstSection.style.zIndex = "0";
         secondSection.style.opacity = "0";

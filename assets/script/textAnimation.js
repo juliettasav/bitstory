@@ -12,6 +12,8 @@ const tSixth = document.querySelector("#p6");
 const tSeventh = document.querySelector("#p7");
 const tEight = document.querySelector("#p8");
 const tNinth = document.querySelector("#p9");
+const size = document.documentElement.clientHeight;
+
 
 setTimeout(() => {
     if (window.innerWidth <= 425)
@@ -53,14 +55,14 @@ else
 }
 
 window.addEventListener("scroll", () => {
-    if (window.pageYOffset < window.innerHeight - 50)
+    if (window.pageYOffset < size * 3 - 50)
     {
         titleFirst.style.opacity = "1";
         titleSecond.style.opacity = "0";
         titleThird.style.opacity = "0";
         titleFourth.style.opacity = "0";
     }
-    else if (window.pageYOffset >= (window.innerHeight - 50) && window.pageYOffset < (window.innerHeight))
+    else if (window.pageYOffset >= (size * 3 - 50) && window.pageYOffset < (size * 3))
     {
         titleFirst.style.opacity = "0";
         titleSecond.style.opacity = "0";
@@ -68,7 +70,7 @@ window.addEventListener("scroll", () => {
         titleFourth.style.opacity = "0";
         titleFirst.style.transform = "translateY(-20px)";
     }
-    else if (window.pageYOffset >= (window.innerHeight) &&  window.pageYOffset < (window.innerHeight * 2))
+    else if (window.pageYOffset >= (size * 3) &&  window.pageYOffset < (size * 6 - 50))
     {
         titleFirst.style.opacity = "0";
         titleThird.style.opacity = "0";
@@ -96,7 +98,7 @@ window.addEventListener("scroll", () => {
             tFourth.style.opacity = "1"
         }, 500)
 
-    } else if (window.pageYOffset >= ((window.innerHeight * 2)) &&  window.pageYOffset < (window.innerHeight * 2 + 50))
+    } else if (window.pageYOffset >= ((size * 6 - 50)) &&  window.pageYOffset < (size * 6))
     {
         titleSecond.style.opacity = "0";
         titleFirst.style.opacity = "0";
@@ -104,7 +106,7 @@ window.addEventListener("scroll", () => {
         titleFourth.style.opacity = "0";
         titleSecond.style.transform = "translateY(-20px)";
     }
-    else if (window.pageYOffset >= (window.innerHeight * 2 + 50) &&  window.pageYOffset < ((window.innerHeight * 3 + 150)))
+    else if (window.pageYOffset >= (size * 6) &&  window.pageYOffset < ((size * 8 - 50)))
     {
         titleFirst.style.opacity = "0";
         titleSecond.style.opacity = "0";
@@ -138,20 +140,18 @@ window.addEventListener("scroll", () => {
             tSeventh.style.opacity = "1"
         }, 500)
 
-        console.log('hello !!!! 3 => 1');
         
     } 
-    else if (window.pageYOffset >= ((window.innerHeight * 3)) &&  window.pageYOffset < (window.innerHeight * 3 + 50))
+    else if (window.pageYOffset >= ((size * 8 - 50)) &&  window.pageYOffset < (size * 8))
     {
         titleFirst.style.opacity = "0";
         titleSecond.style.opacity = "0";
         titleThird.style.opacity = "0";
         titleThird.style.transform = "translateY(-20px)";
         titleFourth.style.opacity = "0";
-        console.log('hello !!!! all 0');
         
     }
-    else if (window.pageYOffset >= (window.innerHeight * 3 + 50) &&  window.pageYOffset < (window.innerHeight * 4))
+    else if (window.pageYOffset >= (size * 8) &&  window.pageYOffset < (size * 12))
     {
         titleFourth.style.opacity = "1";
         titleFirst.style.opacity = "0";
