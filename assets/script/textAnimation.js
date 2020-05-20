@@ -151,7 +151,7 @@ window.addEventListener("scroll", () => {
         titleFourth.style.opacity = "0";
         
     }
-    else if (window.pageYOffset >= (size * 8) &&  window.pageYOffset < (size * 12))
+    else if (window.pageYOffset >= (size * 8) &&  window.pageYOffset < (size * 9))
     {
         titleFourth.style.opacity = "1";
         titleFirst.style.opacity = "0";
@@ -177,5 +177,9 @@ window.addEventListener("scroll", () => {
             tNinth.style.transform = "translateY(0px)";
             tNinth.style.opacity = "1"
         }, 500)
+    }
+    else if (window.pageYOffset >= (size * 9))
+    {
+        titleFourth.style.opacity = "0";
     }
 })

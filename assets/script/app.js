@@ -5,7 +5,8 @@ window.addEventListener('scroll', () => {
     const firstSection =  document.querySelector("section.intro");
     const secondSection =  document.querySelector("section.about");
     const thirdSection =  document.querySelector("section.we-create");
-    const fourthSection = document.querySelector("section.innovate")
+    const fourthSection = document.querySelector("section.innovate");
+    const footer = document.querySelector('footer');
 
     // Get the size of user's screen
     const size = document.documentElement.clientHeight;
@@ -24,6 +25,7 @@ window.addEventListener('scroll', () => {
         thirdSection.style.zIndex = "0";
         fourthSection.style.opacity = "0";
         fourthSection.style.zIndex = "0";
+        footer.style.opacity = 0;
         
     }
     if(scrollValue >= size * 3 && scrollValue <= size * 6)
@@ -36,6 +38,7 @@ window.addEventListener('scroll', () => {
         thirdSection.style.zIndex = "0";
         fourthSection.style.opacity = "0";
         fourthSection.style.zIndex = "0";
+        footer.style.opacity = 0;
   
     }
     if (scrollValue > size * 6 && scrollValue <= size * 9)
@@ -48,9 +51,11 @@ window.addEventListener('scroll', () => {
         thirdSection.style.zIndex = "1";
         fourthSection.style.opacity = "0";
         fourthSection.style.zIndex = "0";
+        footer.style.opacity = 0;
+        
 
     }
-    if (scrollValue > size * 8)
+    if (scrollValue > size * 8 && scrollValue <= size * 9)
     {
         console.log('last animation');
         
@@ -62,7 +67,18 @@ window.addEventListener('scroll', () => {
         thirdSection.style.zIndex = "0";
         fourthSection.style.opacity = "1";
         fourthSection.style.zIndex = "1";
+        footer.style.opacity = 0;
+        footer.style.bottom = "0px";
 
+
+    }
+    if (scrollValue > size * 9)
+    {
+        console.log('footer show');
+
+        fourthSection.style.opacity = ".29";
+        footer.style.opacity = 1;
+        footer.style.bottom = "50px";
 
     }
 
