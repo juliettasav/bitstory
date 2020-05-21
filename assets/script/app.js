@@ -75,8 +75,6 @@ window.addEventListener('scroll', () => {
     }
     if (scrollValue > size * 9)
     {
-        console.log('footer show');
-        lastTitle.style.opacity = 0;
         fourthSection.style.opacity = ".29";
         footer.style.opacity = 1;
         footer.style.bottom = "50px";
