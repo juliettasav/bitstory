@@ -282,8 +282,8 @@ window.addEventListener('scroll', () => {
             twlvriangle.style.opacity = "1";
             thrteenTriangle.style.opacity = "1";
             fourteenTriangle.style.opacity = "1";
-            rightSide.style.transform = `translate(${value - 1000}px, -${value - 1000}px)`;
-            leftSide.style.transform = `translate(-${value - 1000}px, ${value - 1000}px)`;            
+            rightSide.style.transform = `translate(${(value - 1000) / 3}px, -${(value - 1000) / 3}px)`;
+            leftSide.style.transform = `translate(-${(value - 1000) / 3}px, ${(value - 1000) / 3}px)`;            
         }
 
             

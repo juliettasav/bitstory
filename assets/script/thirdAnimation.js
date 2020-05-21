@@ -117,7 +117,7 @@ window.addEventListener('scroll', () => {
         
         if (value >= 4000)
         {
-            animationSVG.style.transform = `translateY(-${(value - 4000) / 6}px)`;
+            animationSVG.style.transform = `translateY(-${(value - 4000) / 10}px)`;
         }
 
     }
