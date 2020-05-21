@@ -114,7 +114,6 @@ window.addEventListener("scroll", () => {
         if(Math.round(window.getComputedStyle(titleThird).getPropertyValue("opacity")) == 0)
         {
             titleThird.style.opacity = "1 !important";
-            console.log('0');
             
         }
         titleFourth.style.opacity = "0";

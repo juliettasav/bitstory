@@ -7,6 +7,7 @@ window.addEventListener('scroll', () => {
     const thirdSection =  document.querySelector("section.we-create");
     const fourthSection = document.querySelector("section.innovate");
     const footer = document.querySelector('footer');
+    const lastTitle = document.querySelector("#title-fourth");
 
     // Get the size of user's screen
     const size = document.documentElement.clientHeight;
@@ -75,7 +76,7 @@ window.addEventListener('scroll', () => {
     if (scrollValue > size * 9)
     {
         console.log('footer show');
-
+        lastTitle.style.opacity = 0;
         fourthSection.style.opacity = ".29";
         footer.style.opacity = 1;
         footer.style.bottom = "50px";
