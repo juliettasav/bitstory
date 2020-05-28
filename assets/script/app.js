@@ -58,7 +58,6 @@ window.addEventListener('scroll', () => {
     }
     if (scrollValue > size * 8 && scrollValue <= size * 9)
     {
-        console.log('last animation');
         
         firstSection.style.opacity = "0";
         firstSection.style.zIndex = "0";

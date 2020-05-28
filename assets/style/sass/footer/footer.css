@@ -46,7 +46,20 @@ footer .container .right-box a:first-child {
   margin-right: 30px;
 }
 
+@media screen and (max-width: 425px) {
+  footer .container .right-box a:first-child {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
 footer .container .right-box a .img-social {
   width: 32px;
+}
+
+@media screen and (max-width: 425px) {
+  footer .container .right-box a .img-social:last-child {
+    margin-top: 10px;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

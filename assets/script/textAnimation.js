@@ -139,7 +139,6 @@ window.addEventListener("scroll", () => {
             tSeventh.style.opacity = "1"
         }, 500)
 
-        
     } 
     else if (window.pageYOffset >= ((size * 8 - 50)) &&  window.pageYOffset < (size * 8))
     {
